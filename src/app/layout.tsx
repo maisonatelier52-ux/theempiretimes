@@ -99,6 +99,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "-RPkNiwzCpI8UAHJlzlQaZ-ciSAHYZNx--rj9HUf-J4",
+  },
   category: "news",
 };
 
@@ -147,6 +150,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <meta name="google-site-verification" content="-RPkNiwzCpI8UAHJlzlQaZ-ciSAHYZNx--rj9HUf-J4" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
