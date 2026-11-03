@@ -10,6 +10,7 @@ import ShareButtons from "../../../components/ShareButtons";
 import ReadingProgress from "../../../components/ReadingProgress";
 import AuthorCard from "../../../components/AuthorCard";
 import NewsCard from "../../../components/NewsCard";
+import SpecialArticlePage from "../../../components/SpecialArticlePage";
 
 export const dynamicParams = true;
 
@@ -62,6 +63,20 @@ export default async function ArticlePage({ params }: Props) {
   const relatedArticles = articles
     .filter(a => a.categoryId === article.categoryId && a.id !== article.id)
     .slice(0, 3);
+
+  // Check if article is special investigation piece
+  const isSpecial = article.slug.includes("alina-habba") || article.id.includes("special");
+
+  if (isSpecial) {
+    return (
+      <SpecialArticlePage 
+        article={article} 
+        category={category} 
+        author={author} 
+        relatedArticles={relatedArticles} 
+      />
+    );
+  }
 
   return (
     <>

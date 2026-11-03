@@ -3,96 +3,98 @@ import { Author } from "../types/news";
 export const authors: Author[] = [
   {
     id: "auth-1",
-    name: "John Carter",
-    slug: "john-carter",
-    role: "Senior Political Correspondent",
-    bio: "Covering politics, policy and international affairs. Formerly at major global publications.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Editorial Bureau",
+    bio: "Original reporting, investigations, and analysis delivered by the reporters and correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@johncarter_news",
-      linkedin: "johncarter",
-      email: "j.carter@example.com"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-2",
-    name: "Elena Rodriguez",
-    slug: "elena-rodriguez",
-    role: "Technology Editor",
-    bio: "Exploring the intersection of technology, society, and the future. Author of 'The Silicon Age'.",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Technology Desk",
+    bio: "Original reporting and technical insights delivered by the reporters and correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@erodriguez_tech",
-      linkedin: "elenarodriguez"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-3",
-    name: "Marcus Chen",
-    slug: "marcus-chen",
-    role: "Business Analyst",
-    bio: "Deciphering global markets, emerging startups, and economic trends for over a decade.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Markets & Economics Desk",
+    bio: "Financial analysis and macroeconomic reporting delivered by the correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@marcuschen_biz"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-4",
-    name: "Sarah Jenkins",
-    slug: "sarah-jenkins",
-    role: "World News Director",
-    bio: "Award-winning journalist reporting on international conflicts, diplomacy, and global human interest stories.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Foreign Bureau",
+    bio: "International coverage and diplomatic reporting delivered by the correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@sjenkins_world",
-      linkedin: "sarahjenkins"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-5",
-    name: "David Kim",
-    slug: "david-kim",
-    role: "Culture Critic",
-    bio: "Reviewing arts, entertainment, and the cultural movements shaping our modern identity.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Culture & Arts Desk",
+    bio: "Cultural criticism and societal commentary delivered by the correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@dkim_culture"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-6",
-    name: "Dr. Aisha Patel",
-    slug: "aisha-patel",
-    role: "Science Reporter",
-    bio: "Former researcher turning complex scientific discoveries into accessible stories for the public.",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Science & Medicine Desk",
+    bio: "Scientific reporting and health breakthroughs investigated by The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@apatel_science",
-      linkedin: "aishapatel"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-7",
-    name: "Tom Harrison",
-    slug: "tom-harrison",
-    role: "Sports Columnist",
-    bio: "Passionate about the games, the athletes, and the stories that transcend the scoreboard.",
-    avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Sports Desk",
+    bio: "Sports reporting and athletic coverage delivered by the correspondents of The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@tharrison_sports"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   },
   {
     id: "auth-8",
-    name: "Julia Frost",
-    slug: "julia-frost",
-    role: "Health Correspondent",
-    bio: "Investigating healthcare systems, wellness trends, and the science of living better.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=256&h=256&auto=format&fit=crop",
+    name: "The Empire Times Staff",
+    slug: "empire-times-staff",
+    role: "Health & Investigative Desk",
+    bio: "Public health and medical reporting investigated by The Empire Times.",
+    avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
-      twitter: "@jfrost_health",
-      email: "j.frost@example.com"
+      twitter: "@theempiretimes",
+      email: "newsdesk@theempiretimes.com"
     }
   }
 ];
