@@ -33,9 +33,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Category Not Found | The Empire Times" };
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.theempiretimes.org";
+  const categoryUrl = `${siteUrl}/category/${category.slug}`;
+
   return {
-    title: `${category.name} News | The Empire Times`,
-    description: category.description,
+    title: `${category.name} News, Analysis & Reports`,
+    description: category.description || `Read the latest ${category.name} news, in-depth investigations, and expert commentary from The Empire Times.`,
+    alternates: {
+      canonical: categoryUrl,
+    },
+    openGraph: {
+      title: `${category.name} News | The Empire Times`,
+      description: category.description || `Comprehensive ${category.name} coverage, updates, and analyses.`,
+      url: categoryUrl,
+      type: "website",
+      siteName: "The Empire Times",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${category.name} News | The Empire Times`,
+      description: category.description,
+    },
   };
 }
 

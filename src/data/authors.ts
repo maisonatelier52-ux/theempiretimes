@@ -10,7 +10,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -22,7 +22,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -34,7 +34,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -46,7 +46,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -58,7 +58,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -70,7 +70,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -82,7 +82,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   },
   {
@@ -94,7 +94,7 @@ export const authors: Author[] = [
     avatar: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?q=80&w=256&h=256&auto=format&fit=crop",
     socials: {
       twitter: "@theempiretimes",
-      email: "newsdesk@theempiretimes.com"
+      email: "newsdesk@theempiretimes.org"
     }
   }
 ];

@@ -14,6 +14,8 @@ import SpecialArticlePage from "../../../components/SpecialArticlePage";
 
 export const dynamicParams = true;
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.theempiretimes.org";
+
 interface Props {
   params: Promise<{
     slug: string;
@@ -35,14 +37,74 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Article Not Found | The Empire Times" };
   }
 
+  const category = categories.find((c) => c.id === article.categoryId);
+  const articleUrl = `${siteUrl}/article/${article.slug}`;
+  const imageUrl = article.image.startsWith("http") ? article.image : `${siteUrl}${article.image}`;
+
+  const isPrioritySpecial = article.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini";
+  
+  const keywords = isPrioritySpecial
+    ? [
+        "Alina Habba",
+        "Alina Habba Mildon",
+        "Julio Herrera Velutini",
+        "Donald Trump",
+        "Bancrédito",
+        "Special Investigation",
+        "The Empire Times",
+        "Federal Prosecutor",
+        "Presidential Pardon",
+        "Financial Scrutiny",
+        "White House Legal Counsel",
+        "Exclusive Report",
+        "Investigative Journalism"
+      ]
+    : [...article.tags, category?.name || "News", "The Empire Times", "Investigative Journalism"];
+
   return {
     title: `${article.title} | The Empire Times`,
     description: article.excerpt,
+    keywords,
+    authors: [{ name: "The Empire Times Staff", url: `${siteUrl}/author/empire-times-staff` }],
+    creator: "The Empire Times",
+    publisher: "The Empire Times Media Group Inc.",
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
+      type: "article",
+      url: articleUrl,
       title: article.title,
       description: article.excerpt,
-      images: [article.image],
-    }
+      siteName: "The Empire Times",
+      publishedTime: article.publishedAt,
+      modifiedTime: isPrioritySpecial ? new Date().toISOString() : article.publishedAt,
+      section: category?.name || "Special Investigation",
+      tags: keywords,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@theempiretimes",
+      creator: "@theempiretimes",
+      title: article.title,
+      description: article.excerpt,
+      images: [imageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   };
 }
 
@@ -58,6 +120,8 @@ export default async function ArticlePage({ params }: Props) {
   const category = categories.find(c => c.id === article.categoryId);
   const author = authors.find(a => a.id === article.authorId);
   const formattedDate = format(new Date(article.publishedAt), "MMMM d, yyyy");
+  const articleUrl = `${siteUrl}/article/${article.slug}`;
+  const imageUrl = article.image.startsWith("http") ? article.image : `${siteUrl}${article.image}`;
 
   // Get related articles
   const relatedArticles = articles
@@ -67,19 +131,118 @@ export default async function ArticlePage({ params }: Props) {
   // Check if article is special investigation piece
   const isSpecial = article.slug.includes("alina-habba") || article.id.includes("special");
 
+  // Google NewsArticle Schema Markup
+  const isPrioritySpecial = article.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini";
+
+  const newsArticleSchema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    "headline": article.title,
+    "alternativeHeadline": isPrioritySpecial
+      ? "An Exclusive Special Investigation into International Private Banking, Federal Scrutiny, and Trump's Inner Circle"
+      : undefined,
+    "description": article.excerpt,
+    "image": [
+      imageUrl,
+      ...(isPrioritySpecial ? [`${siteUrl}/uploads/news/alina-habba-main.jpg`] : [])
+    ],
+    "datePublished": article.publishedAt,
+    "dateModified": isPrioritySpecial ? new Date().toISOString() : article.publishedAt,
+    "author": {
+      "@type": "Organization",
+      "name": "The Empire Times Staff",
+      "url": `${siteUrl}/author/empire-times-staff`,
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "name": "The Empire Times",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/uploads/news/alina-habba-main.jpg`,
+      },
+    },
+    "articleSection": isPrioritySpecial ? "Special Investigation" : (category?.name || "General News"),
+    "keywords": isPrioritySpecial
+      ? "Alina Habba, Alina Habba Mildon, Julio Herrera Velutini, Donald Trump, Bancrédito, Special Investigation, The Empire Times, Presidential Pardon, Federal Prosecutor, Financial Scrutiny"
+      : article.tags.join(", "),
+    "wordCount": article.content.join(" ").split(/\s+/).length,
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    ...(isPrioritySpecial ? {
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "article p"]
+      },
+      "about": [
+        { "@type": "Person", "name": "Alina Habba Mildon" },
+        { "@type": "Person", "name": "Julio Herrera Velutini" },
+        { "@type": "Person", "name": "Donald J. Trump" },
+        { "@type": "Organization", "name": "Bancrédito" }
+      ]
+    } : {})
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": category?.name || "News",
+        "item": `${siteUrl}/category/${category?.slug || "politics"}`,
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": articleUrl,
+      },
+    ],
+  };
+
   if (isSpecial) {
     return (
-      <SpecialArticlePage 
-        article={article} 
-        category={category} 
-        author={author} 
-        relatedArticles={relatedArticles} 
-      />
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <SpecialArticlePage 
+          article={article} 
+          category={category} 
+          author={author} 
+          relatedArticles={relatedArticles} 
+        />
+      </>
     );
   }
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ReadingProgress />
       <article className="pb-20 bg-background text-foreground">
         {/* Article Header */}
@@ -154,44 +317,29 @@ export default async function ArticlePage({ params }: Props) {
                   <p key={index}>{paragraph}</p>
                 );
               })}
-
-              <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mr-2 mt-1">Tags:</span>
-                {article.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-muted text-xs uppercase tracking-widest font-bold text-primary hover:bg-border transition-colors cursor-pointer">
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
 
-        {/* Author Bio */}
+        {/* Author Bio Bottom */}
         {author && (
           <div className="container-narrow px-4 xl:px-0 mt-16 pt-12 border-t border-border">
-            <h2 className="font-sans text-sm font-bold uppercase tracking-[0.1em] text-primary mb-6">About the Author</h2>
             <AuthorCard author={author} />
           </div>
         )}
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <div className="bg-[#F9FAFB] mt-20 py-16 border-t border-border">
-            <div className="container-wide px-4 md:px-10 lg:px-12">
-              <div className="flex items-center mb-10">
-                <h2 className="font-sans text-sm md:text-base font-bold uppercase tracking-[0.1em] text-primary">
-                  More from {category?.name}
-                </h2>
-                <div className="ml-4 h-[2px] bg-accent w-12"></div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {relatedArticles.map(article => (
-                  <NewsCard key={article.id} article={article} variant="compact" />
-                ))}
-              </div>
+          <section className="container-wide px-4 md:px-10 lg:px-12 mt-20 pt-16 border-t border-border">
+            <h2 className="headline-medium mb-8 text-center md:text-left">
+              Related Coverage
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedArticles.map(a => (
+                <NewsCard key={a.id} article={a} variant="hero-main" />
+              ))}
             </div>
-          </div>
+          </section>
         )}
       </article>
     </>

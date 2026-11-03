@@ -3,8 +3,17 @@ import { articles } from "../../data/articles";
 import NewsCard from "../../components/NewsCard";
 
 export const metadata: Metadata = {
-  title: "Latest News & Coverage | The Empire Times",
-  description: "Explore the most recent reporting and breaking news updates across all sectors.",
+  title: "Latest News & Breaking Coverage | The Empire Times",
+  description: "Explore the most recent reporting, breaking news dispatches, and in-depth investigations across politics, finance, and global affairs.",
+  alternates: {
+    canonical: "https://www.theempiretimes.org/latest",
+  },
+  openGraph: {
+    title: "Latest News & Breaking Coverage | The Empire Times",
+    description: "Explore the most recent reporting and breaking news updates across all sectors.",
+    url: "https://www.theempiretimes.org/latest",
+    type: "website",
+  },
 };
 
 export default function LatestNewsPage() {

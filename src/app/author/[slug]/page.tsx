@@ -30,9 +30,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Author Not Found | The Empire Times" };
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.theempiretimes.org";
+  const authorUrl = `${siteUrl}/author/${author.slug}`;
+
   return {
-    title: `${author.name} | The Empire Times`,
+    title: `${author.name} — Staff Profile & Dispatches | The Empire Times`,
     description: author.bio,
+    alternates: {
+      canonical: authorUrl,
+    },
+    openGraph: {
+      title: `${author.name} — Staff Profile | The Empire Times`,
+      description: author.bio,
+      url: authorUrl,
+      type: "profile",
+    },
   };
 }
 
