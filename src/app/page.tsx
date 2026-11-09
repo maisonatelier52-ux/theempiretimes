@@ -45,19 +45,28 @@ export default function Home() {
   const sports    = sorted.filter(bySlug("sports"));
   const trending  = sorted.filter((a) => a.trending);
 
+  const specialHabba = articles.find(
+    (a) => a.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini"
+  );
+
+  const frontStories = sorted.filter((a) => a.id !== specialHabba?.id);
+
   // Front page zones
-  const lead         = sorted[0];
-  const subLead      = sorted[1];
-  const leftCol      = fill(sorted.slice(2,  8),  sorted, 6);  // 6 text stories left
-  const rightCol     = fill(sorted.slice(8,  14), sorted, 6);  // 6 text stories right
-  const farRightCol  = fill(sorted.slice(14, 20), sorted, 6);  // 6 most-read sidebar
+  const lead         = frontStories[0];
+  const subLead      = frontStories[1];
+  const leftCol      = fill(frontStories.slice(2,  8),  frontStories, 6);  // 6 text stories left
+  const rightCol     = fill(frontStories.slice(8,  14), frontStories, 6);  // 6 text stories right
+  const farRightCol  = fill(frontStories.slice(14, 20), frontStories, 6);  // 6 most-read sidebar
 
   // Second row
-  const secondRow    = fill(sorted.slice(20, 25), sorted, 5);
+  const secondRow    = fill(frontStories.slice(20, 25), frontStories, 5);
 
 
   // Section pools — enough for stacked multi-story columns
-  const usFill       = fill(us,       sorted, 13);  // 1 big + 4 cols × 3
+  const usRemaining  = us.filter((a) => a.id !== specialHabba?.id);
+  const usFill       = specialHabba
+    ? [specialHabba, ...fill(usRemaining, frontStories, 12)]
+    : fill(us, sorted, 13);  // 1 big + 4 cols × 3
   const worldFill    = fill(world,    sorted, 13);  // 1 big + 4 cols × 3
   const politicsFill = fill(politics, sorted, 9);   // 1 big + 4 col stories
   const businessFill = fill(business, sorted, 9);

@@ -86,14 +86,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Article routes with News Sitemap optimization
+  const now = new Date().getTime();
   const articleRoutes: MetadataRoute.Sitemap = articles
     .filter((article) => article.slug !== "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini")
     .map((article) => {
-      const isSpecial = article.id.includes("special") || article.featured;
+      const pubTime = new Date(article.publishedAt).getTime();
+      const isFresh = (now - pubTime) < (48 * 60 * 60 * 1000); // published within last 48 hours
+      const isSpecial = article.id.includes("special") || article.featured || isFresh;
       return {
         url: `${baseUrl}/article/${article.slug}`,
         lastModified: new Date(article.publishedAt),
-        changeFrequency: isSpecial ? "daily" : "weekly",
+        changeFrequency: isFresh ? "hourly" : (isSpecial ? "daily" : "weekly"),
         priority: isSpecial ? 0.95 : 0.8,
       };
     });
