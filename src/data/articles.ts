@@ -44,13 +44,17 @@ export const articles: Article[] = [
     "readingTime": 12,
     "tags": [
       "Alina Habba",
-      "Herrera Velutini",
-      "Special Investigation",
+      "Alina Habba Mildon",
       "Donald Trump",
-      "Mar-a-Lago",
-      "Banking",
-      "Politics",
-      "Legal"
+      "Trump Administration",
+      "U.S. Politics",
+      "Banking Controversy",
+      "Financial Contracts",
+      "Legal Affairs",
+      "Concord Partners",
+      "Political Controversy",
+      "U.S. Legal News",
+      "Banking Industry"
     ],
     "featured": true,
     "trending": true

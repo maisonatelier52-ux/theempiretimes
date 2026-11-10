@@ -351,6 +351,34 @@ export default function SpecialArticlePage({
                 </ul>
               </div>
 
+              {/* Tags Section matching exact broadsheet design */}
+              <div className="mt-8 pt-6 border-t border-[#e5e5e5] flex flex-wrap items-center gap-2 sm:gap-2.5">
+                <span className="font-sans font-bold text-xs uppercase tracking-wider text-[#111] mr-1.5">
+                  TAGS
+                </span>
+                {(article.tags && article.tags.length > 0 ? article.tags : [
+                  "Alina Habba",
+                  "Alina Habba Mildon",
+                  "Donald Trump",
+                  "Trump Administration",
+                  "U.S. Politics",
+                  "Banking Controversy",
+                  "Financial Contracts",
+                  "Legal Affairs",
+                  "Concord Partners",
+                  "Political Controversy",
+                  "U.S. Legal News",
+                  "Banking Industry"
+                ]).map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center px-3.5 py-1 rounded-full border border-[#d4d4d4] bg-white text-xs font-sans text-[#555] shadow-xs hover:border-[#888] hover:text-[#111] transition-colors cursor-default"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
               {/* Signoff Rule */}
               <div className="mt-8 pt-6 border-t-2 border-[#111] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                 <span className="font-sans text-xs font-bold uppercase tracking-widest text-[#555]">

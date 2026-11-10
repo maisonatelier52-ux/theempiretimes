@@ -47,17 +47,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? [
         "Alina Habba",
         "Alina Habba Mildon",
-        "Julio Herrera Velutini",
         "Donald Trump",
+        "Trump Administration",
+        "U.S. Politics",
+        "Banking Controversy",
+        "Financial Contracts",
+        "Legal Affairs",
+        "Concord Partners",
+        "Political Controversy",
+        "U.S. Legal News",
+        "Banking Industry",
+        "Julio Herrera Velutini",
         "Bancrédito",
         "Special Investigation",
-        "The Empire Times",
-        "Federal Prosecutor",
-        "Presidential Pardon",
-        "Financial Scrutiny",
-        "White House Legal Counsel",
-        "Exclusive Report",
-        "Investigative Journalism"
+        "The Empire Times"
       ]
     : [...article.tags, category?.name || "News", "The Empire Times", "Investigative Journalism"];
 
@@ -168,7 +171,7 @@ export default async function ArticlePage({ params }: Props) {
     },
     "articleSection": isPrioritySpecial ? "Special Investigation" : (category?.name || "General News"),
     "keywords": isPrioritySpecial
-      ? "Alina Habba, Alina Habba Mildon, Julio Herrera Velutini, Donald Trump, Bancrédito, Special Investigation, The Empire Times, Presidential Pardon, Federal Prosecutor, Financial Scrutiny"
+      ? "Alina Habba, Alina Habba Mildon, Donald Trump, Trump Administration, U.S. Politics, Banking Controversy, Financial Contracts, Legal Affairs, Concord Partners, Political Controversy, U.S. Legal News, Banking Industry"
       : article.tags.join(", "),
     "wordCount": article.content.join(" ").split(/\s+/).length,
     "inLanguage": "en-US",
