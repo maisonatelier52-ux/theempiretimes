@@ -457,6 +457,67 @@ export default function SpecialArticlePage({
                   <span>Source: Documented Accounts</span>
                   <span>Verified 2026</span>
                 </div>
+
+                {/* The New York Times Coverage Feature Under Timeline */}
+                <div className="mt-8 pt-6 border-t-2 border-[#111]">
+                  <div className="flex items-center justify-between gap-2 mb-2.5">
+                    <span className="font-sans text-[10px] font-black uppercase tracking-[0.2em] text-accent flex items-center gap-1.5">
+                      <FileText className="w-3.5 h-3.5" />
+                      The New York Times
+                    </span>
+                    <span className="font-sans text-[10px] text-[#777] uppercase tracking-wider font-semibold">
+                      Nov. 10, 2026
+                    </span>
+                  </div>
+
+                  {/* Screenshot in Perfect Fit Size */}
+                  <a
+                    href="https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block relative w-full overflow-hidden rounded border border-[#d8d8d4] shadow-sm hover:shadow-md transition-shadow bg-[#fcfcfb]"
+                  >
+                    <Image
+                      src="/uploads/news/nyt-alina-habba-mildon-loses-50m-contract.jpg"
+                      alt="The New York Times: Alina Habba Mildon Loses $50 Million Contract That Enraged Trump"
+                      width={657}
+                      height={804}
+                      className="w-full h-auto object-cover block group-hover:opacity-95 transition-opacity"
+                    />
+                  </a>
+
+                  {/* Brief Content & Summary */}
+                  <div className="mt-3.5 space-y-2">
+                    <h4 className="font-serif text-sm sm:text-base font-bold text-[#111] leading-snug">
+                      Alina Habba Mildon Loses $50 Million Contract That Enraged Trump
+                    </h4>
+                    <p className="font-serif text-xs text-[#555] leading-relaxed">
+                      The former Trump lawyer signed the contract with a family company weeks before the president gave the family’s patriarch a pardon. Habba Mildon will miss out on tens of millions of dollars following her termination, though retaining $14.5 million in prior payments and signing bonuses.
+                    </p>
+
+                    {/* Read More Button and Direct Link */}
+                    <div className="pt-2 flex flex-wrap items-center justify-between gap-2">
+                      <a
+                        href="https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#111] hover:bg-accent text-white font-sans text-xs font-bold uppercase tracking-wider rounded transition-colors duration-200 shadow-sm"
+                      >
+                        Read More
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                      <a
+                        href="https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-sans text-[10px] text-[#777] hover:text-accent hover:underline break-all"
+                        title="https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html"
+                      >
+                        nytimes.com &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </aside>
 
