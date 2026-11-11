@@ -323,6 +323,20 @@ export default function SpecialArticlePage({
                   <li className="flex items-start gap-2">
                     <ExternalLink className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
                     <div className="min-w-0">
+                      <span className="font-bold text-[#111] block mb-0.5">The New York Times:</span>
+                      <a
+                        href="https://www.nytimes.com/2026/11/10/us/politics/alina-habba-fired-pardon.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:underline break-words"
+                      >
+                        The New York Times: Alina Habba, Presidential Pardons, and the Collapse of Trump Legal Defense Ties
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ExternalLink className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <div className="min-w-0">
                       <span className="font-bold text-[#111] block mb-0.5">MEAWW News Investigation:</span>
                       <a
                         href="https://news.meaww.com/trump-calls-former-lawyer-alina-habbas-50m-deal-not-acceptable"
