@@ -60,6 +60,267 @@ export const articles: Article[] = [
     "trending": true
   },
     {
+      "id": "art-us-house-hegseth-impeachment-vote-2026",
+      "slug": "house-gop-blocks-hegseth-impeachment-resolution-vote",
+      "title": "House GOP Defeats Democratic Hegseth Impeachment Resolution in Fierce Floor Debate",
+      "excerpt": "The U.S. House of Representatives voted 211 to 204 along strict party lines to refer a privileged impeachment resolution against Defense Secretary Pete Hegseth to the Judiciary Committee, blunting an immediate floor confrontation over military leadership.",
+      "categoryId": "cat-1",
+      "authorId": "auth-1",
+      "image": "/uploads/news/house-floor-impeachment-vote.jpg",
+      "publishedAt": "2026-11-11T09:15:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "U.S. Politics",
+        "Congress",
+        "House of Representatives",
+        "Pete Hegseth",
+        "Department of Defense",
+        "Impeachment Resolution",
+        "Capitol Hill"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "WASHINGTON — The United States House of Representatives plunged into high-decibel constitutional debate on Tuesday as Republican leadership successfully steered a privileged resolution seeking the impeachment of Defense Secretary Pete Hegseth away from the floor and into the House Judiciary Committee. The procedural showdown concluded in a tight 211 to 204 roll-call vote, along strict partisan boundaries, that effectively shelves immediate consideration of high-crimes-and-misdemeanors allegations while avoiding the political hazards of an up-or-down verdict on the Pentagon chief.",
+        "The impeachment measure, introduced under expedited floor rules by Democratic leaders, alleged systematic dereliction of duty, politicization of the senior flag-officer ranks, and unauthorized alterations to international deterrence deployments across Europe and the Pacific. House Democrats argued that recent Pentagon restructuring decisions compromised operational readiness and bypassed statutory congressional notification mandates established under Title 10 of the United States Code. 'The oath of office requires vigilance when the civilian leadership of the armed services operates outside established law,' the resolution's primary sponsor declared during ten minutes of impassioned floor arguments.",
+        "Republican floor leaders countered with fierce denunciations, framing the effort as an illegitimate partisan maneuver designed to sabotage executive branch authority and weaponize military governance during acute geopolitical crises. Addressing the chamber from the well of the House, the House Majority Leader emphasized that Defense Secretary Hegseth had implemented the exact reforms mandated by the commander-in-chief and endorsed by millions of American voters. 'What we are witnessing today is not an exercise of solemn constitutional oversight; it is an orchestrated political spectacle intended to paralyze the Department of Defense at the precise moment our adversaries are testing American resolve,' the Majority Leader asserted.",
+        "The vote to refer the resolution to the Judiciary Committee, chaired by senior conservative allies of the administration, virtually guarantees that the measure will languish indefinitely without public evidentiary hearings or a formal committee markup. While two moderate Republicans initially hesitated over procedural implications regarding congressional war powers consultation, intense whipping efforts by leadership throughout the morning secured party unanimity, averting what would have been an embarrassing legislative rebuff for the administration.",
+        "The contentious floor battle comes as the Pentagon navigates wide-ranging organizational reviews, audits of legacy defense procurement contracts, and shifting troop posture agreements with overseas allies. Constitutional scholars and defense analysts tracking Capitol Hill noted that while privileged impeachment resolutions against cabinet officials have historically been rare, their frequency has surged amidst intensified polarization over federal agency oversight. Outside the Capitol, defense policy groups and veteran organizations expressed relief that immediate command disruptions were averted, even as progressive watchdogs vowed to pursue parallel inquiries through federal oversight lawsuits and Freedom of Information Act filings in the weeks ahead."
+      ]
+    },
+    {
+      "id": "art-kennedy-family-lawsuit-trump-national-mall-arch-2026",
+      "slug": "kennedy-family-federal-lawsuit-blocks-trump-national-mall-arch",
+      "title": "Kennedy Family and Historic Preservationists File Federal Lawsuit to Halt Trump’s 250-Foot National Mall Monument",
+      "excerpt": "A coalition led by prominent Kennedy family heirs and historic architectural trusts filed an emergency federal complaint in Washington D.C., seeking a nationwide injunction against the construction of a proposed 250-foot triumphal monument across the National Mall sightline.",
+      "categoryId": "cat-9",
+      "authorId": "auth-1",
+      "image": "/uploads/news/national-mall-washington-lawsuit.jpg",
+      "publishedAt": "2026-11-11T08:45:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "U.S. News",
+        "National Mall",
+        "Washington D.C.",
+        "Kennedy Family",
+        "Federal Court",
+        "Historic Preservation",
+        "Trump Monument"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "WASHINGTON — A high-profile legal showdown over the historic skyline of the nation's capital erupted on Tuesday as prominent heirs of the Kennedy family, joined by the National Trust for Historic Preservation and a coalition of civic architects, filed an emergency civil action in the U.S. District Court for the District of Columbia. The complaint seeks an immediate preliminary injunction to halt preliminary site engineering and federal permitting for a proposed 250-foot monumental triumphal arch commissioned by executive order to commemorate the upcoming United States Semiquincentennial.",
+        "The proposed monument, designed to rise between the Washington Monument and the Lincoln Memorial, has drawn fierce opposition from urban planners and historic preservationists who contend that the colossal neoclassical structure would irreversibly violate the statutory 1901 McMillan Plan. According to court filings, the federal project bypassed mandatory statutory reviews mandated under the National Environmental Policy Act (NEPA) and the National Historic Preservation Act (NHPA), without obtaining the legally necessary approvals from the National Capital Planning Commission or the Commission of Fine Arts.",
+        "'The National Mall belongs to all generations of the American people, not to the architectural impulses of any single political administration,' stated lead plaintiff counsel representing the Kennedy descendants outside the E. Barrett Prettyman Federal Courthouse. 'For more than a century, the deliberate low-rise horizontal vista between the Capitol dome and the Lincoln Memorial has symbolized democratic restraint and republican humility. Erecting a towering imperial monolith directly into this sacred public axis constitutes an aesthetic and legal desecration of our shared national heritage.'",
+        "Federal attorneys representing the Department of the Interior and the General Services Administration pushed back forcefully against the lawsuit, asserting that Article II executive authority grants the president broad discretion over commemorative federal properties under existing bicentennial celebration statutes passed by Congress. Administration officials characterized the triumphal arch as an enduring tribute to American greatness, engineered to withstand centuries of public visitation and serve as the centerpiece of 2026 national jubilee ceremonies. Pre-construction soil sampling and ceremonial barrier installation had already commenced along Constitution Avenue earlier this week.",
+        "The legal dispute brings to the forefront longstanding tensions between executive monument mandates and federal preservation laws governing Washington's core monumental precinct. Legal scholars point out that previous judicial challenges regarding Mall monuments—including the World War II Memorial and the Martin Luther King Jr. Memorial—faced rigorous statutory hurdles but rarely encountered immediate emergency injunction applications filed directly by prominent political dynasties and leading architectural boards. Chief Judge of the D.C. District Court has ordered federal defendants to respond to the preliminary injunction application by Friday morning, setting the stage for oral arguments that will determine the physical landscape of America's civic front yard."
+      ]
+    },
+    {
+      "id": "art-rubio-diplomacy-gulf-iran-military-operations-2026",
+      "slug": "rubio-confirms-us-sees-no-need-resume-iran-military-operations",
+      "title": "Secretary Rubio Confirms U.S. Sees ‘No Immediate Need’ to Resume Iran Strikes Following Gulf Consultations",
+      "excerpt": "Speaking after high-stakes multilateral discussions in Riyadh and Doha, Secretary of State Marco Rubio affirmed that recent regional diplomatic commitments have established a viable deterrence posture, obviating further U.S. preemptive kinetic strikes.",
+      "categoryId": "cat-4",
+      "authorId": "auth-1",
+      "image": "/uploads/news/marco-rubio-diplomatic-briefing.jpg",
+      "publishedAt": "2026-11-11T08:00:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "World News",
+        "Diplomacy",
+        "Marco Rubio",
+        "Middle East",
+        "Gulf Security",
+        "International Relations",
+        "State Department"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "RIYADH / WASHINGTON — Concluding forty-eight hours of intense, closed-door diplomatic negotiations across the Persian Gulf, Secretary of State Marco Rubio formally confirmed on Tuesday that the United States sees 'no immediate military necessity' to initiate further kinetic strikes against regional military installations. The high-level announcement represents a significant de-escalation after weeks of soaring maritime tensions, drone interceptions, and heightened naval alerts throughout the Strait of Hormuz and the Bab el-Mandeb.",
+        "Appearing alongside Gulf Cooperation Council foreign ministers at a joint press availability in Riyadh, Secretary Rubio articulated that concrete reciprocal security commitments, established through Swiss and Omani intermediaries, had stabilized vital regional energy corridors. 'Our posture has always been rooted in deterrence and the unyielding protection of American personnel and commercial navigation,' Rubio declared. 'Thanks to firm leadership and coordinated defense measures with our Gulf allies, we have communicated unmistakable boundaries. So long as these non-aggression protocols and maritime safety commitments are upheld, the United States will prioritize diplomatic verification over armed action.'",
+        "The diplomatic reprieve follows backchannel discussions where regional intelligence leaders hammered out technical arrangements to halt asymmetric drone incursions against commercial shipping lanes in exchange for targeted adjustments to regional naval inspection zones. Financial and commodity markets responded instantaneously to the State Department’s statement, with global marine insurance premiums dropping sharply and major container conglomerates resuming routine passage schedules through previously restricted red zones.",
+        "Despite the public optimism, defense officials in the Pentagon emphasized that American carrier strike groups and integrated missile defense battalions stationed across the Arabian Peninsula will remain on high operational alert. Congressional leaders on Capitol Hill received a classified briefing from national security deputies outlining the precise technical verification metrics required to prevent clandestine enrichment or covert proxy restocking. Both conservative and moderate lawmakers praised the administration's resolve while cautioning that long-term regional stability depends upon rigorous international inspection enforcement.",
+        "International allies, including British, French, and Japanese maritime task forces operating in the western Indian Ocean, welcomed the diplomatic cooling, issuing joint statements urging sustained adherence to the newly established navigation channels. As Secretary Rubio departs the Middle East for consultations with NATO counterparts in Brussels, geopolitical strategists view this agreement as a crucial diplomatic milestone that successfully averts an all-out regional conflict while reinforcing allied security architectures across the global energy supply chain."
+      ]
+    },
+    {
+      "id": "art-crude-oil-brent-slides-below-90-geopolitical-relief-2026",
+      "slug": "brent-crude-tumbles-below-90-as-geopolitical-risk-premiums-unwind",
+      "title": "Crude Oil Prices Drop Below $90 as Geopolitical Risk Premiums Evaporate Across Global Energy Markets",
+      "excerpt": "Global crude benchmarks recorded their steepest two-day drop of the quarter, as Brent tumbled below $90 per barrel following diplomatic breakthroughs in the Persian Gulf and record domestic inventory accumulations reported by the U.S. Energy Information Administration.",
+      "categoryId": "cat-3",
+      "authorId": "auth-1",
+      "image": "/uploads/news/crude-oil-tanker-shipping.jpg",
+      "publishedAt": "2026-11-11T07:30:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Business",
+        "Crude Oil",
+        "Brent Crude",
+        "Energy Markets",
+        "WTI",
+        "Commodities",
+        "Inflation"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "NEW YORK / LONDON — Global crude oil markets witnessed a dramatic sell-off on Tuesday as international benchmark Brent crude plunged by 4.2% to settle at $88.35 per barrel, dropping below the psychological $90 threshold for the first time in six weeks. West Texas Intermediate (WTI) followed suit, tumbling 4.6% to close at $83.60 on the New York Mercantile Exchange. The steep retreat across energy futures was sparked by a rapid unwinding of geopolitical fear premiums following diplomatic breakthroughs in the Middle East, compounded by unexpectedly robust commercial inventory builds in the United States.",
+        "Energy trading desks reported widespread algorithmic liquidations of long hedge positions that had accumulated during last month’s maritime escalations. According to the latest weekly report from the U.S. Energy Information Administration (EIA), commercial crude stockpiles expanded by an unexpected 5.4 million barrels, driven by record-setting domestic crude output averaging 13.8 million barrels per day alongside elevated seasonal refinery maintenance cycles. At the same time, motor gasoline inventories climbed as autumn travel demand moderated across North American freight and consumer corridors.",
+        "'What we are observing is an immediate normalization of market pricing models,' observed the chief energy strategist at an institutional brokerage in London. 'Traders had priced in a persistent $10 to $12 risk premium on fears of direct transit disruptions in the Strait of Hormuz. With verified diplomatic arrangements restoring commercial transit security and U.S. shale production continuing to break operational records, the physical supply-demand balance once again dominates pricing sentiment. The supply side is fundamentally well-supplied.'",
+        "The rapid decline in crude futures reverberated across equity markets and macroeconomic policy forums. Airline, logistics, and retail equities rallied broadly as projected fourth-quarter fuel expenditures declined, while the S&P 500 Energy Index retreated 2.8% as supermajors adjusted forward revenue outlooks. Federal Reserve officials and central bankers in Frankfurt and Tokyo viewed the drop with quiet relief, recognizing that sustained energy price moderation will provide critical deflationary tailwinds just as benchmark interest rate trajectories are finalized for early 2027.",
+        "Looking forward into the upcoming OPEC+ ministerial summit in Vienna, market analysts anticipate heightened internal debate among major oil producers regarding output quota compliance and spare capacity management. While Gulf producing nations have expressed a preference for maintaining price stability above $85, non-OPEC production growth from the Permian Basin, Guyana, and offshore Brazil continues to apply downward structural pressure on prices. For American motorists and consumers entering the holiday travel window, retail gasoline prices at the pump are projected to drop by an additional 15 to 20 cents per gallon over the next fortnight."
+      ]
+    },
+    {
+      "id": "art-nvidia-jensen-huang-shareholder-class-action-ai-guidance-2026",
+      "slug": "nvidia-jensen-huang-face-federal-shareholder-class-action-over-ai-guidance",
+      "title": "Nvidia and Jensen Huang Sued in Federal Court Over AI Chip Supply Chain Disclosures and Forecasts",
+      "excerpt": "Institutional asset managers have filed a class-action lawsuit in the Northern District of California against Nvidia and Chief Executive Jensen Huang, alleging that leadership mischaracterized next-generation data center delivery timelines and customer concentration risks.",
+      "categoryId": "cat-2",
+      "authorId": "auth-1",
+      "image": "/uploads/news/jensen-huang-nvidia-ai-lawsuit.jpg",
+      "publishedAt": "2026-11-11T07:00:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Technology",
+        "Nvidia",
+        "Jensen Huang",
+        "Artificial Intelligence",
+        "Semiconductors",
+        "Class Action",
+        "Silicon Valley"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "SAN JOSE, Calif. — In a major legal development rattling the global semiconductor industry, a consortium of institutional pension funds and asset managers filed a comprehensive federal securities class action on Tuesday against Nvidia Corporation and its Chief Executive Officer, Jensen Huang. The complaint, lodged in the U.S. District Court for the Northern District of California, alleges that the semiconductor giant made materially misleading statements regarding packaging bottlenecks, yield rates, and revenue predictability for its high-performance AI data center silicon.",
+        "According to the 84-page filing, the plaintiffs claim that between late 2025 and mid-2026, Nvidia corporate executives publicly downplayed severe advanced packaging constraints (specifically regarding Chip-on-Wafer-on-Substrate technology) while privately knowing that hardware revisions would delay high-volume shipments to hyperscale cloud providers by several quarters. The complaint alleges that when customer adjustments and deferred delivery timelines eventually materialized in financial filings, the resulting market correction wiped out tens of billions of dollars in shareholder value, causing substantial losses to public institutional investors.",
+        "'Public corporate officers have a statutory fiduciary duty to provide accurate, transparent assessments of supply chain integrity and delivery timelines, particularly when commercial operations operate at unprecedented market valuations,' stated lead litigation counsel representing the class of shareholders. 'Our complaint alleges that internal engineering assessments detailing thermal yield challenges and silicon packaging revisions were shielded from public view while executives reiterated unachievable production targets to financial analysts.'",
+        "Nvidia responded unequivocally to the lawsuit, issuing a statement defending the integrity of its public disclosures and technological roadmap. 'Nvidia has consistently provided accurate, forward-looking guidance based on available information, openly discussing the complex engineering challenges inherent in rolling out the most sophisticated computing architectures ever manufactured,' a company spokesperson stated. 'This lawsuit is completely devoid of merit. Our next-generation computing architectures are shipping at scale to premier enterprise partners globally, and we will defend ourselves vigorously against these unfounded allegations.'",
+        "The litigation comes at a pivotal inflection point for artificial intelligence infrastructure equities, as Wall Street analysts increasingly scrutinize the return on capital expenditures across major technology conglomerates. Legal experts in Silicon Valley noted that while securities class actions routinely follow sharp market volatility in high-flying tech sectors, surviving initial motions to dismiss requires demonstrating specific knowledge of falsity under stringent PSLRA standards. The case is expected to draw immense attention across institutional finance as discovery proceedings examine confidential supply chain correspondence and internal silicon verification logs."
+      ]
+    },
+    {
+      "id": "art-nasa-clps-autonomous-lunar-rover-contracts-2026",
+      "slug": "nasa-awards-major-commercial-contracts-for-autonomous-lunar-surface-rovers",
+      "title": "NASA Expands Artemis Surface Fleet with Landmark Autonomous Rover and Infrastructure Contracts",
+      "excerpt": "NASA has announced a sweeping series of task orders under the Commercial Lunar Payload Services initiative, greenlighting the deployment of long-range autonomous utility rovers and surface communication arrays destined for the Moon’s permanently shadowed South Pole craters.",
+      "categoryId": "cat-6",
+      "authorId": "auth-1",
+      "image": "/uploads/news/nasa-artemis-lunar-rover-contract.jpg",
+      "publishedAt": "2026-11-11T06:30:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Science",
+        "NASA",
+        "Artemis",
+        "Lunar Rover",
+        "Space Exploration",
+        "Moon",
+        "Aerospace"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "WASHINGTON / HOUSTON — Advancing its foundational preparations for sustained human habitation on the lunar surface, the National Aeronautics and Space Administration (NASA) announced on Tuesday the award of three major commercial contracts valued at over $1.4 billion. The task orders, issued under the Commercial Lunar Payload Services (CLPS) framework, fund the construction, testing, and surface deployment of second-generation autonomous robotic rovers, power transmission hubs, and cryogenic resource prospectors targeting the Moon’s permanently shadowed South Pole craters.",
+        "The selected commercial aerospace teams will deliver heavy-payload robotic explorers equipped with autonomous terrain navigation systems, ground-penetrating radar, and automated ice-drilling apparatuses. Unlike previous exploration rovers that required constant real-time teleoperation from Earth, these advanced robotic units incorporate onboard edge computing and vision-guided neural networks capable of independently navigating rugged lunar regolith and mapping hazardous boulder fields in ultra-low lighting conditions without human intervention.",
+        "'Today marks a transformative shift from exploratory reconnaissance to permanent operational infrastructure on another celestial body,' said NASA's Associate Administrator for Exploration Systems Development during a technical briefing at Headquarters. 'These autonomous rover systems will operate continuously throughout the harsh two-week lunar nights, scouting volatile water ice deposits, establishing microwave communication relays, and laying the groundwork for our astronauts before Artemis expedition crews step foot onto the Shackleton Rim.'",
+        "A key technological milestone within the newly commissioned missions is the deployment of high-efficiency surface solar towers and deployable fuel-cell battery banks designed to survive temperatures plunging below minus 240 degrees Celsius in deep polar craters. Scientists hypothesize that extracting and processing subsurface lunar ice into liquid hydrogen and oxygen propellant will be essential for reducing terrestrial launch mass and fueling long-duration deep space voyages, including future crewed expeditions to Mars.",
+        "The missions are scheduled for sequential launches starting in late 2027 and continuing through 2029 aboard commercial heavy-lift rocket platforms. International space partners, including the European Space Agency and the Japanese Aerospace Exploration Agency, are contributing secondary scientific instruments to the rover payloads, emphasizing the collaborative international character of lunar commercialization. As lunar orbital traffic intensifies, planetary scientists hailed the contracts as an indispensable bridge transforming theoretical space science into a viable off-world industrial ecosystem."
+      ]
+    },
+    {
+      "id": "art-who-global-science-health-coalition-2026",
+      "slug": "who-launches-together-for-science-and-health-global-coalition",
+      "title": "World Health Organization Unveils Global Coalition Uniting 240 Institutions to Safeguard Medical Science",
+      "excerpt": "In response to unprecedented waves of digital disinformation and jurisdictional fragmentation, the World Health Organization has inaugurated a multi-lateral pact connecting 240 medical academies and epidemiological institutes to protect clinical standards.",
+      "categoryId": "cat-8",
+      "authorId": "auth-1",
+      "image": "/uploads/news/who-headquarters-geneva-science.jpg",
+      "publishedAt": "2026-11-11T06:00:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Health",
+        "WHO",
+        "Public Health",
+        "Medical Science",
+        "Epidemiology",
+        "Global Health",
+        "Geneva"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "GENEVA — Standing before delegates representing over seventy sovereign nations and world-renowned clinical research institutions, the World Health Organization (WHO) officially launched the 'Together for Science and Health' global coalition on Tuesday at its international headquarters in Geneva. The historic pact brings together 240 national academies of medicine, independent epidemiological institutes, and public health associations to build an unbreachable defense against medical disinformation, political interference in clinical guidelines, and the erosion of scientific consensus.",
+        "The newly formed coalition establishes a rapid-response scientific verification network designed to analyze, authenticate, and publicly clarify emerging clinical data during public health emergencies. Under the initiative's operational charter, participating medical institutions across five continents will share real-time epidemiological sequencing data, peer-review clinical treatment protocols through unified open-access repositories, and coordinate evidence-based counter-messaging to debunk viral pseudo-scientific claims spreading across social networks.",
+        "'We are confronting an unprecedented paradox in human history: at the exact moment biomedical technology provides the tools to eradicate lethal diseases, trust in verified clinical evidence is being systematically undermined by digital polarization and geopolitical skepticism,' stated the WHO Director-General in his keynote address. 'Science is not an ideological platform or an instrument of political convenience. It is an empirical methodology that protects human lives. This global coalition ensures that clinical truths are defended with rigorous, transparent evidence across every continent.'",
+        "The initiative comes as global public health systems grapple with recurring measles outbreaks, declining childhood immunization compliance in high-income nations, and emerging antimicrobial resistance strains that threaten routine surgical procedures. As part of its operational toolkit, the coalition will deploy AI-assisted monitoring algorithms across multilingual online platforms to detect coordinated disinformation campaigns before they cause widespread vaccine hesitancy or panic in vulnerable communities.",
+        "Leading medical associations in the United States, the United Kingdom, Japan, and South Africa signed on as founding governing members, pledging technical resources and epidemiological personnel to the coalition’s coordination secretariat in Geneva. Public health leaders and hospital administrators globally lauded the development, pointing out that an independent, scientifically insulated body represents the most effective mechanism to preserve life-saving medical standards and rebuild community faith in public health institutions for generations to come."
+      ]
+    },
+    {
+      "id": "art-unesco-ai-media-literacy-framework-schools-2026",
+      "slug": "unesco-unveils-comprehensive-ai-literacy-standards-for-global-schools",
+      "title": "UNESCO Releases Landmark Media Literacy Framework Equipping Classrooms for Generative AI Realities",
+      "excerpt": "Delegates at UNESCO headquarters in Paris approved a binding global standard for synthetic media education, advising member states on mandatory classroom curricula to cultivate critical evaluation of machine-generated text, voice synthesis, and algorithmic bias.",
+      "categoryId": "cat-5",
+      "authorId": "auth-1",
+      "image": "/uploads/news/unesco-headquarters-paris-education.jpg",
+      "publishedAt": "2026-11-11T05:30:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Culture",
+        "UNESCO",
+        "Education",
+        "Artificial Intelligence",
+        "Media Literacy",
+        "Paris",
+        "Digital Ethics"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "PARIS — Meeting in an extraordinary plenary assembly at its historic headquarters in Paris on Tuesday, the United Nations Educational, Scientific and Cultural Organization (UNESCO) unanimously ratified a comprehensive global curriculum framework titled 'Critical Media and Algorithmic Literacy in the Era of Generative AI.' The landmark policy document delivers an actionable educational roadmap designed to teach primary and secondary school students how to navigate, critically evaluate, and verify information in a world dominated by synthetic text, hyper-realistic deepfakes, and algorithmic content curation.",
+        "The framework, developed over two years in consultation with educational psychologists, investigative journalists, ethicists, and computational linguists from forty member nations, advises governments to integrate critical algorithmic thinking directly into core school curricula rather than treating digital literacy as an elective technical subject. Core modules instruct students on detecting synthetic audio artifacts, cross-referencing automated search summaries against primary historical archives, and understanding the systemic commercial incentives that govern algorithmic recommendation engines.",
+        "'Generative artificial intelligence has radically compressed the boundary between authentic reality and computer-generated fabrication,' declared UNESCO's Assistant Director-General for Education during the closing symposium. 'If our school systems merely teach students how to consume digital content without equipping them with the epistemological tools to interrogate provenance, authorship, and algorithmic bias, we leave democratic societies defenseless against manipulation. Critical literacy is no longer just an academic skill; it is the core civic defense of our democratic future.'",
+        "The guideline outlines age-appropriate benchmarks, advising that middle school students learn to identify deepfake facial discrepancies and verify digital watermarks, while high school seniors evaluate ethical dilemmas surrounding automated intellectual property, training dataset biases, and synthetic political advertising. UNESCO also unveiled a companion open-source teacher training portal available in twelve languages, providing educators with interactive classroom toolkits, real-world case studies, and verification software to foster critical skepticism in educational settings.",
+        "Representatives from education ministries across Europe, Asia, and the Americas welcomed the guidelines, with several national delegations announcing plans to pilot the framework in public school systems starting in the 2027 academic year. Cultural historians and pedagogical experts commended the initiative as a decisive step toward safeguarding human judgment and democratic discourse, ensuring that the next generation of global citizens possesses the analytical rigor required to flourish in a synthetic information landscape."
+      ]
+    },
+    {
+      "id": "art-nfl-trade-deadline-defensive-rushers-blockbuster-2026",
+      "slug": "nfl-trade-deadline-sparks-historic-arms-race-among-championship-contenders",
+      "title": "NFL Trade Deadline Frenzy Sees Division Leaders Execute Record Blockbuster Moves for Pass Rushers",
+      "excerpt": "The 2026 NFL trade deadline concluded with a record flurry of eleven last-minute transactions, as Super Bowl hopefuls traded premium draft capital to acquire premier defensive edge rushers and bolster secondary depth ahead of the regular season stretch.",
+      "categoryId": "cat-7",
+      "authorId": "auth-1",
+      "image": "/uploads/news/nfl-quarterback-trade-deadline.jpg",
+      "publishedAt": "2026-11-11T05:00:00.000Z",
+      "readingTime": 6,
+      "tags": [
+        "Sports",
+        "NFL",
+        "Trade Deadline",
+        "Football",
+        "American Football",
+        "Super Bowl",
+        "Roster Moves"
+      ],
+      "featured": false,
+      "trending": true,
+      "content": [
+        "NEW YORK — The 2026 National Football League trade deadline reached an electric climax on Tuesday afternoon as general managers executed a relentless sequence of blockbuster maneuvers before the 4:00 PM Eastern buzzer. In total, eleven separate trades involving seven former Pro Bowlers and fifteen future draft selections were finalized in the deadline’s final three hours, marking the most active and consequential midseason transaction window in modern NFL history.",
+        "The dominant theme across both conferences was an aggressive defensive arms race, with top division leaders parting with premium first- and second-round draft picks to secure elite pass-rushing talent capable of neutralizing dynamic quarterbacks in postseason play. With offensive scoring reaching historic highs through the first half of the regular season, front offices determined that generating organic four-man defensive pressure without blitzing was the non-negotiable differentiator for a legitimate Super Bowl run in January and February.",
+        "'In today's NFL, if you cannot disrupt the opposing quarterback off the edge with disciplined pass rushers, you are playing at an insurmountable postseason disadvantage,' commented an AFC general manager shortly after completing a multi-pick package deal. 'The teams hoisting the Lombardi Trophy year after year are those equipped to win critical third downs in the fourth quarter. When game-changing defensive anchors become available on the trade market, contenders have to be willing to push their chips into the middle of the table.'",
+        "Beyond defensive line upgrades, several championship contenders executed targeted deals to fortify offensive line depth and acquire veteran coverage cornerbacks to defend against explosive perimeter aerial attacks. Meanwhile, rebuilding franchises stockpiled high-value draft capital for the upcoming 2027 draft class while freeing up substantial salary cap flexibility under revised roster accounting frameworks.",
+        "Sports media and analytics platforms immediately re-calibrated conference championship odds, noting that the balance of power across both the AFC and NFC shifted markedly within a matter of hours. As locker rooms integrate new defensive starters ahead of crucial Week 11 divisional showdowns, head coaches face the daunting tactical challenge of rapidly assimilating complex playbooks under intense national spotlight. For football fans across the country, the frenetic trade deadline sets the stage for what promises to be one of the most unpredictable and tightly contested playoff races in league history."
+      ]
+    },
+    {
       "id": "art-pol-2026-11-10-hegseth-impeachment",
       "slug": "house-moves-to-impeach-defense-secretary-pete-hegseth-pentagon-turmoil-2026",
       "title": "House Conservatives and Democrats Advance Impeachment Resolution Against Defense Secretary Pete Hegseth Over Pentagon Directives",
