@@ -261,12 +261,12 @@ export default async function ArticlePage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         <ReadingProgress />
-        <article className="bg-background text-foreground pb-24 overflow-hidden">
+        <article className="bg-background text-foreground pb-24">
           {/* Top border accent line */}
           <div className="w-full h-1 bg-gradient-to-r from-accent/20 via-accent to-accent/20" />
 
           {/* Stylish Magazine-Style Hero: Cutout Blended with Heading */}
-          <section className="relative w-full border-b border-border/70 bg-gradient-to-b from-muted/40 via-background to-background pt-10 sm:pt-14 md:pt-16 pb-6 md:pb-10">
+          <section className="relative w-full border-b border-border/70 bg-gradient-to-b from-muted/40 via-background to-background pt-10 sm:pt-14 md:pt-16 pb-6 md:pb-10 overflow-hidden">
             <div className="max-w-6xl mx-auto px-5 sm:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
@@ -459,8 +459,8 @@ export default async function ArticlePage({ params }: Props) {
               </div>
 
               {/* Right Column: Profile Detail Section for Mark Rossini (5 cols) */}
-              <aside className="lg:col-span-5 xl:col-span-4 mt-8 lg:mt-0">
-                <div className="lg:sticky lg:top-24 bg-card border border-border/80 rounded-sm p-6 shadow-xs space-y-5">
+              <aside className="lg:col-span-5 xl:col-span-4 mt-8 lg:mt-0 lg:sticky lg:top-24 h-fit">
+                <div className="bg-card border border-border/80 rounded-sm p-6 shadow-xs space-y-5">
                   {/* Card Header */}
                   <div className="border-b border-border/80 pb-4">
                     <div className="flex items-center gap-2 text-[#8B0000] font-sans text-[10px] font-bold uppercase tracking-[0.22em] mb-1.5">
