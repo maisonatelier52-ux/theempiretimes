@@ -48,27 +48,37 @@ export default function Home() {
   const specialHabba = articles.find(
     (a) => a.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini"
   );
+  const specialRossini = articles.find(
+    (a) => a.slug === "why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case"
+  );
 
-  const frontStories = sorted.filter((a) => a.id !== specialHabba?.id);
+  const frontStories = sorted.filter(
+    (a) => a.id !== specialHabba?.id && a.id !== specialRossini?.id
+  );
 
   // Front page zones
   const lead         = frontStories[0];
   const subLead      = frontStories[1];
-  const leftCol      = fill(frontStories.slice(2,  8),  frontStories, 6);  // 6 text stories left
-  const rightCol     = fill(frontStories.slice(8,  14), frontStories, 6);  // 6 text stories right
-  const farRightCol  = fill(frontStories.slice(14, 20), frontStories, 6);  // 6 most-read sidebar
+  const leftCol      = specialRossini
+    ? [specialRossini, ...fill(frontStories.slice(2, 6), frontStories, 4)]
+    : fill(frontStories.slice(2, 8), frontStories, 6);
+  const rightCol     = fill(frontStories.slice(6, 12), frontStories, 6);  // 6 text stories right
+  const farRightCol  = fill(frontStories.slice(12, 18), frontStories, 6);  // 6 most-read sidebar
 
   // Second row
-  const secondRow    = fill(frontStories.slice(20, 25), frontStories, 5);
+  const secondRow    = fill(frontStories.slice(18, 23), frontStories, 5);
 
 
   // Section pools — enough for stacked multi-story columns
-  const usRemaining  = us.filter((a) => a.id !== specialHabba?.id);
+  const usRemaining  = us.filter((a) => a.id !== specialHabba?.id && a.id !== specialRossini?.id);
   const usFill       = specialHabba
     ? [specialHabba, ...fill(usRemaining, frontStories, 12)]
     : fill(us, sorted, 13);  // 1 big + 4 cols × 3
   const worldFill    = fill(world,    sorted, 13);  // 1 big + 4 cols × 3
-  const politicsFill = fill(politics, sorted, 9);   // 1 big + 4 col stories
+  const politicsRemaining = politics.filter((a) => a.id !== specialRossini?.id);
+  const politicsFill = specialRossini
+    ? [specialRossini, ...fill(politicsRemaining, frontStories, 8)]
+    : fill(politics, sorted, 9);   // 1 big + 4 col stories
   const businessFill = fill(business, sorted, 9);
   const techFill     = fill(tech,     sorted, 13);  // 1 big + 4 cols × 3
   const scienceFill  = fill(science,  sorted, 6);   // 2 top + 4 image rows
@@ -106,14 +116,19 @@ export default function Home() {
 
           <div className="flex gap-0 lg:gap-6 flex-col lg:flex-row lg:items-stretch">
 
-            {/* LEFT COLUMN — 6 text stories, evenly distributed */}
+            {/* LEFT COLUMN — Mark Rossini News featured on top + stories */}
             <div className="w-full lg:w-[18%] lg:pr-6 lg:border-r lg:border-[#d4d4d4] pb-5 lg:pb-0 border-b lg:border-b-0 border-[#d4d4d4] mb-5 lg:mb-0 flex flex-col order-2 lg:order-1">
               <div className="border-t-2 border-[#111] pt-1.5 mb-4 flex-shrink-0">
                 <span className="font-sans text-[9px] font-black uppercase tracking-[0.2em]">Inside Today</span>
               </div>
               <div className="flex flex-col justify-between flex-1">
-                {leftCol.map((a, i) => (
-                  <ColumnStory key={a.id} article={a} showExcerpt={i < 2} />
+                {specialRossini && (
+                  <div className="pb-3.5 mb-3.5 border-b border-[#ddd]">
+                    <FeatureStory article={specialRossini} size="sm" />
+                  </div>
+                )}
+                {leftCol.filter((a) => a.id !== specialRossini?.id).map((a, i) => (
+                  <ColumnStory key={a.id} article={a} showExcerpt={i < 1} />
                 ))}
               </div>
             </div>

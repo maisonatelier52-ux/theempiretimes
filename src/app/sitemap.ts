@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "always",
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/article/why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case`,
+      lastModified: new Date(),
+      changeFrequency: "always",
+      priority: 1.0,
+    },
   ];
 
   // Core static pages with high search priority
@@ -88,7 +94,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Article routes with News Sitemap optimization
   const now = new Date().getTime();
   const articleRoutes: MetadataRoute.Sitemap = articles
-    .filter((article) => article.slug !== "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini")
+    .filter(
+      (article) =>
+        article.slug !== "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini" &&
+        article.slug !== "why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case"
+    )
     .map((article) => {
       const pubTime = new Date(article.publishedAt).getTime();
       const isFresh = (now - pubTime) < (48 * 60 * 60 * 1000); // published within last 48 hours

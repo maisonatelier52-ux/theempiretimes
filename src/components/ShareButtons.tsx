@@ -22,9 +22,17 @@ const Linkedin = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export default function ShareButtons({ title, url }: { title?: string, url?: string }) {
+export default function ShareButtons({ 
+  title, 
+  url,
+  orientation = "vertical"
+}: { 
+  title?: string; 
+  url?: string;
+  orientation?: "vertical" | "horizontal";
+}) {
   const handleShare = (platform: string) => {
-    const shareUrl = url || typeof window !== 'undefined' ? window.location.href : '';
+    const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
     const shareTitle = title || 'Check out this article';
     
     let href = '';
@@ -48,6 +56,42 @@ export default function ShareButtons({ title, url }: { title?: string, url?: str
       window.open(href, '_blank', 'width=600,height=400');
     }
   };
+
+  if (orientation === "horizontal") {
+    return (
+      <div className="flex items-center gap-1.5">
+        <span className="text-[11px] font-sans uppercase tracking-wider text-muted-foreground mr-1 hidden sm:inline">Share:</span>
+        <button 
+          onClick={() => handleShare('twitter')} 
+          className="w-7 h-7 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-accent hover:text-accent hover:bg-accent/5 transition-all" 
+          aria-label="Share on X"
+        >
+          <Twitter className="w-3.5 h-3.5" />
+        </button>
+        <button 
+          onClick={() => handleShare('linkedin')} 
+          className="w-7 h-7 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-accent hover:text-accent hover:bg-accent/5 transition-all" 
+          aria-label="Share on LinkedIn"
+        >
+          <Linkedin className="w-3.5 h-3.5" />
+        </button>
+        <button 
+          onClick={() => handleShare('facebook')} 
+          className="w-7 h-7 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-accent hover:text-accent hover:bg-accent/5 transition-all" 
+          aria-label="Share on Facebook"
+        >
+          <Facebook className="w-3.5 h-3.5" />
+        </button>
+        <button 
+          onClick={() => handleShare('copy')} 
+          className="w-7 h-7 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:border-accent hover:text-accent hover:bg-accent/5 transition-all" 
+          aria-label="Copy Link"
+        >
+          <LinkIcon className="w-3.5 h-3.5" />
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-4 sticky top-32">
