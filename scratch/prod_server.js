@@ -2,6 +2,23 @@ const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
 
+// Prevent unexpected termination
+process.on('uncaughtException', (err) => {
+  console.error('uncaughtException:', err);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('unhandledRejection:', reason);
+});
+process.on('exit', (code) => {
+  console.log('process.exit called with code:', code);
+});
+if (process.stdin.isTTY) {
+  process.stdin.resume();
+}
+
+// Keep event loop active indefinitely
+setInterval(() => {}, 1000 * 60 * 60);
+
 const dev = false;
 const hostname = '0.0.0.0';
 const port = 3000;
