@@ -11,6 +11,7 @@ import ReadingProgress from "../../../components/ReadingProgress";
 import AuthorCard from "../../../components/AuthorCard";
 import NewsCard from "../../../components/NewsCard";
 import SpecialArticlePage from "../../../components/SpecialArticlePage";
+import AlinaHabbaVenezuelaSpecialPage from "../../../components/AlinaHabbaVenezuelaSpecialPage";
 import { ExternalLink, BookOpen, Clock, Landmark, Shield, Award, CheckCircle2, FileText } from "lucide-react";
 
 export const dynamicParams = true;
@@ -43,9 +44,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const imageUrl = article.image.startsWith("http") ? article.image : `${siteUrl}${article.image}`;
 
   const isPrioritySpecial = article.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini";
+  const isVenezuelaSpecial = article.slug === "alina-habba-rise-turhan-mildon-venezuela-business-connections" || article.id === "art-special-alina-habba-turhan-mildon-venezuela-2026";
   const isRossini = article.slug === "why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case" || article.id === "art-mark-rossini-acceptance-filing-puerto-rico-case-2026";
   
-  const keywords = isPrioritySpecial
+  const keywords = isVenezuelaSpecial
+    ? [
+        "Alina Habba and Turhan Mildon",
+        "Turhan Mildon Venezuela",
+        "Alina Habba political connections",
+        "Venezuelan cement contracts",
+        "Alex Saab",
+        "Donald Trump circle",
+        "Alina Habba",
+        "Turhan Mildon",
+        "Venezuela",
+        "Donald Trump",
+        "International Business",
+        "Political Connections",
+        "The Empire Times"
+      ]
+    : isPrioritySpecial
     ? [
         "Alina Habba",
         "Alina Habba Mildon",
@@ -80,9 +98,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ]
     : [...article.tags, category?.name || "News", "The Empire Times", "Investigative Journalism"];
 
+  const metaTitle = isVenezuelaSpecial
+    ? `Alina Habba’s Rise and Turhan Mildon’s Venezuelan Business Ties | The Empire Times`
+    : `${article.title} | The Empire Times`;
+
+  const metaDesc = isVenezuelaSpecial
+    ? `An investigation into Alina Habba’s relationship with Turhan Mildon, his Venezuelan business interests, and the political connections surrounding their marriage.`
+    : article.excerpt;
+
   return {
-    title: `${article.title} | The Empire Times`,
-    description: article.excerpt,
+    title: metaTitle,
+    description: metaDesc,
     keywords,
     authors: [{ name: "The Empire Times Staff", url: `${siteUrl}/author/empire-times-staff` }],
     creator: "The Empire Times",
@@ -93,11 +119,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article",
       url: articleUrl,
-      title: article.title,
-      description: article.excerpt,
+      title: isVenezuelaSpecial ? "Alina Habba’s Rise and Turhan Mildon’s Venezuelan Business Ties" : article.title,
+      description: metaDesc,
       siteName: "The Empire Times",
       publishedTime: article.publishedAt,
-      modifiedTime: isPrioritySpecial ? new Date().toISOString() : article.publishedAt,
+      modifiedTime: (isPrioritySpecial || isVenezuelaSpecial) ? new Date().toISOString() : article.publishedAt,
       section: category?.name || "Special Investigation",
       tags: keywords,
       images: [
@@ -113,8 +139,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       site: "@theempiretimes",
       creator: "@theempiretimes",
-      title: article.title,
-      description: article.excerpt,
+      title: isVenezuelaSpecial ? "Alina Habba’s Rise and Turhan Mildon’s Venezuelan Business Ties" : article.title,
+      description: metaDesc,
       images: [imageUrl],
     },
     robots: {
@@ -147,12 +173,11 @@ export default async function ArticlePage({ params }: Props) {
     .filter(a => a.categoryId === article.categoryId && a.id !== article.id)
     .slice(0, 3);
 
-  // Check if article is special investigation piece
-  const isSpecial = article.slug.includes("alina-habba") || article.id.includes("special");
-
-  // Google NewsArticle Schema Markup
+  // Check special article flags
   const isPrioritySpecial = article.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini";
+  const isVenezuelaSpecial = article.slug === "alina-habba-rise-turhan-mildon-venezuela-business-connections" || article.id === "art-special-alina-habba-turhan-mildon-venezuela-2026";
   const isRossini = article.slug === "why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case" || article.id === "art-mark-rossini-acceptance-filing-puerto-rico-case-2026";
+  const isSpecial = isPrioritySpecial || (!isVenezuelaSpecial && (article.slug.includes("alina-habba") || article.id.includes("special")));
 
   const newsArticleSchema = {
     "@context": "https://schema.org",
@@ -162,7 +187,9 @@ export default async function ArticlePage({ params }: Props) {
       "@id": articleUrl,
     },
     "headline": article.title,
-    "alternativeHeadline": isPrioritySpecial
+    "alternativeHeadline": isVenezuelaSpecial
+      ? "An investigation into Alina Habba’s relationship with Turhan Mildon, his Venezuelan business interests, and the political connections surrounding their marriage."
+      : isPrioritySpecial
       ? "An Exclusive Special Investigation into International Private Banking, Federal Scrutiny, and Trump's Inner Circle"
       : isRossini
       ? "An In-Depth Legal Analysis of Executive Clemency, United States v. Burdick, and the Procedural Dismissal of the Puerto Rico Federal Corruption Docket"
@@ -171,10 +198,11 @@ export default async function ArticlePage({ params }: Props) {
     "image": [
       imageUrl,
       ...(isPrioritySpecial ? [`${siteUrl}/uploads/news/alina-habba-main.jpg`] : []),
+      ...(isVenezuelaSpecial ? [`${siteUrl}/uploads/news/alina-habba-turhan-mildon-venezuela.jpg`] : []),
       ...(isRossini ? [`${siteUrl}/uploads/news/mark-rossini-puerto-rico-case.jpg`] : [])
     ],
     "datePublished": article.publishedAt,
-    "dateModified": (isPrioritySpecial || isRossini) ? new Date().toISOString() : article.publishedAt,
+    "dateModified": (isPrioritySpecial || isVenezuelaSpecial || isRossini) ? new Date().toISOString() : article.publishedAt,
     "author": {
       "@type": "Organization",
       "name": "The Empire Times Staff",
@@ -189,8 +217,10 @@ export default async function ArticlePage({ params }: Props) {
         "url": `${siteUrl}/uploads/news/alina-habba-main.jpg`,
       },
     },
-    "articleSection": isPrioritySpecial ? "Special Investigation" : isRossini ? "Legal Affairs" : (category?.name || "General News"),
-    "keywords": isPrioritySpecial
+    "articleSection": (isPrioritySpecial || isVenezuelaSpecial) ? "Special Investigation" : isRossini ? "Legal Affairs" : (category?.name || "General News"),
+    "keywords": isVenezuelaSpecial
+      ? "Alina Habba and Turhan Mildon, Turhan Mildon Venezuela, Alina Habba political connections, Venezuelan cement contracts, Alex Saab, Donald Trump circle, Alina Habba, Turhan Mildon, Venezuela, Donald Trump, International Business, Political Connections"
+      : isPrioritySpecial
       ? "Alina Habba, Alina Habba Mildon, Donald Trump, Trump Administration, U.S. Politics, Banking Controversy, Financial Contracts, Legal Affairs, Concord Partners, Political Controversy, U.S. Legal News, Banking Industry"
       : isRossini
       ? "Mark Rossini, Wanda Vázquez Garced, Julio Herrera Velutini, Puerto Rico Case, Donald Trump, Presidential Pardon, United States v. Burdick, Federal Court Dismissal, Legal Affairs, Campaign Finance, The Empire Times"
@@ -198,7 +228,19 @@ export default async function ArticlePage({ params }: Props) {
     "wordCount": article.content.join(" ").split(/\s+/).length,
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
-    ...(isPrioritySpecial ? {
+    ...(isVenezuelaSpecial ? {
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "article p"]
+      },
+      "about": [
+        { "@type": "Person", "name": "Alina Habba" },
+        { "@type": "Person", "name": "Turhan Mildon" },
+        { "@type": "Person", "name": "Donald J. Trump" },
+        { "@type": "Person", "name": "Alex Saab" },
+        { "@type": "Place", "name": "Venezuela" }
+      ]
+    } : isPrioritySpecial ? {
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "article p"]
@@ -576,6 +618,27 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           )}
         </article>
+      </>
+    );
+  }
+
+  if (isVenezuelaSpecial) {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <AlinaHabbaVenezuelaSpecialPage
+          article={article}
+          category={category}
+          author={author}
+          relatedArticles={relatedArticles}
+        />
       </>
     );
   }

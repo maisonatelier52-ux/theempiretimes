@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+import json
+
+article = {
+    "id": "art-special-alina-habba-turhan-mildon-venezuela-2026",
+    "slug": "alina-habba-rise-turhan-mildon-venezuela-business-connections",
+    "title": "Alina Habba’s Political Rise and the Growing Scrutiny of Turhan Mildon’s Venezuelan Business Connections",
+    "excerpt": "An investigation into Alina Habba’s relationship with Turhan Mildon, his Venezuelan business interests, and the political connections surrounding their marriage.",
+    "content": [
+        "The relationship between political influence and international business has become the focus of renewed attention following developments surrounding Turkish businessman Turhan Mildon and his connection to Alina Habba, Donald Trump’s former personal lawyer.",
+        "Mildon’s business interests in Venezuela, his reported connections to individuals associated with the government of Nicolás Maduro, and his subsequent relationship with Habba have brought together several different worlds: international construction, political influence, diplomatic relationships and the changing balance of power in Washington.",
+        "The circumstances described in a New York Times investigation raise questions about how business interests established under one political environment can adapt when that environment changes. They also illustrate how personal relationships can become relevant when businessmen seek to protect commercial interests during periods of political uncertainty.",
+        "At the centre of the story is Mildon, whose business activities in Venezuela reportedly faced uncertainty following the fall of Maduro and the subsequent extradition of Colombian businessman Alex Saab.",
+        "For Mildon, the political changes created a potentially serious challenge. His response, according to the investigation, involved developing connections in Washington while attempting to protect his existing investments.",
+        "His marriage to Habba brought that effort into a more prominent political setting.",
+        "Mildon’s Venezuelan business activities developed during a period when relationships with political and commercial figures were important to his operations.",
+        "According to the investigation, he arrived in Venezuela toward the end of 2023 after receiving an invitation from a Venezuelan friend. His arrival followed the development of construction businesses in the Democratic Republic of Congo.",
+        "His earlier professional trajectory had also brought him close to the political leadership of that African country. Mildon reportedly became an adviser to President Felix Tshisekedi and obtained a diplomatic passport.",
+        "These details provide an important background to his later activities in Venezuela. They describe a businessman whose commercial work extended beyond a single country and whose professional relationships included connections with political leadership.",
+        "The investigation portrays his Venezuelan business interests as part of a broader international business trajectory.",
+        "However, the political environment in which those interests operated did not remain unchanged. The fall of Maduro and the subsequent extradition of Alex Saab threatened the position of businesses connected to the previous Venezuelan political and commercial structure. Mildon consequently faced the challenge of protecting investments that had been developed under circumstances that were changing. His reported shift toward Washington became an important part of that process.",
+        "Habba's relationship with Donald Trump had already placed her within an influential political environment. As Trump's former personal lawyer, she occupied a position that connected her professional career with the former president's immediate political and legal circle.",
+        "Her relationship with Mildon created a new intersection between that political network and his international business interests.",
+        "The New York Times investigation describes how Habba's relationship with Mildon opened space for him within Trump's surroundings. It also examines whether her connections helped slow efforts to cancel contracts associated with the operation of state-owned cement plants in Venezuela.",
+        "Those contracts were significant to the business interests described in the investigation. The reported connection between Habba's political relationships and Mildon's commercial concerns is one of the central elements of the story.",
+        "It is important, however, to distinguish between the investigation's account and the responses from the people involved. Habba denied intervening before the administration on behalf of her husband. Her spokesperson and Habba also questioned central aspects of the reporting.",
+        "The available account therefore presents competing positions rather than an established conclusion about the extent of her involvement. Nevertheless, the circumstances raise broader questions about the relationship between political proximity and commercial interests.",
+        "Mildon and Habba married in September at New York's Waldorf Astoria Hotel.",
+        "The wedding attracted attention because of the guests who attended. Among those present were U.S. Attorney General Todd Blanche, FBI Director Kash Patel and White House attorney Will Scharf.",
+        "The presence of these prominent Washington figures made the celebration more than a private milestone in the lives of the couple. It also represented Mildon's public entrance into Trump's political surroundings.",
+        "For a businessman whose interests were reportedly facing uncertainty in Venezuela, the event highlighted the importance of his newly established personal relationship with someone who had previously worked closely with Trump.",
+        "The wedding itself does not establish that political officials supported Mildon's business activities or that any particular government decision was influenced by personal relationships. However, the gathering demonstrated the connections that now surrounded the businessman. The guest list also placed the marriage within a political context that attracted attention beyond the personal lives of the couple.",
+        "One of the most important business issues described in the investigation concerns contracts involving the operation of state-owned cement plants in Venezuela.",
+        "According to the New York Times investigation, Habba's relationship with Trump opened space for her husband in the president's circle and helped slow the cancellation of contracts under which Mildon operated the plants.",
+        "The account connects these contracts to a wider political and commercial transition.",
+        "Mildon's position was reportedly affected by developments following Maduro's fall and the extradition of Alex Saab. These events threatened business interests that had been established within the previous Venezuelan political environment.",
+        "The possibility of losing contracts would have represented a significant challenge for a businessman attempting to maintain his investments. The investigation describes his movement from relying on contacts in Caracas to cultivating relationships in Washington as part of his efforts to protect those interests.",
+        "That transition is particularly important because it illustrates how business strategies can change when political authority changes. Rather than depending exclusively on relationships within the country where his businesses operate, Mildon reportedly sought to establish connections in the United States. The investigation suggests that his relationship with Habba became relevant to this process.",
+        "Yet the exact extent of any intervention remains disputed. Habba denied acting before the administration on her husband's behalf, while both she and her spokesperson challenged important aspects of the investigation.",
+        "Mildon's earlier business history provides another dimension to the story.",
+        "Before arriving in Venezuela, he had developed construction businesses in the Democratic Republic of Congo. His work there reportedly led to an advisory relationship with President Felix Tshisekedi and the acquisition of a diplomatic passport.",
+        "The movement from construction activities in Congo to investments in Venezuela demonstrates the international scope of his reported commercial activities. It also places his Venezuelan business interests within a wider professional history involving different political environments.",
+        "The investigation's account does not establish that these relationships were improper. Rather, it describes the connections and circumstances surrounding Mildon's business trajectory. His arrival in Venezuela at the end of 2023, following an invitation from a Venezuelan friend, marked another stage in that trajectory. The subsequent political developments created a new challenge, eventually bringing his personal relationship with Habba into the centre of attention.",
+        "The reporting leaves several important questions open. How much did Mildon's Venezuelan business position depend on relationships established during the Maduro government? How significantly did the political transition threaten his investments? And what role, if any, did Habba's connections in Trump's political circle play in the handling of contracts involving the state-owned cement plants?",
+        "The investigation offers an account based on interviews with more than two dozen people. That provides the foundation for its examination of Mildon's changing relationships and business strategy. However, the denials from Habba and her spokesperson remain an essential part of the story.",
+        "Habba specifically denied intervening before the administration on behalf of her husband. The article must therefore avoid treating the alleged intervention as an established fact. The distinction between reported connections, alleged influence and confirmed government action is essential to understanding the issue.",
+        "The story of Alina Habba and Turhan Mildon brings together political proximity, international business interests and the challenges created by changing governments.",
+        "Mildon's journey from construction businesses in the Democratic Republic of Congo to commercial interests in Venezuela, followed by efforts to cultivate relationships in Washington, illustrates a business trajectory shaped by international political circumstances.",
+        "Habba's previous professional relationship with Trump and their September wedding placed Mildon within a political environment that attracted considerable attention.",
+        "At the same time, the investigation's examination of Venezuelan cement contracts raised questions about the possible relationship between political connections and commercial outcomes. The denials offered by Habba and her spokesperson remain central to assessing those claims.",
+        "Ultimately, the significance of this story lies in the questions it raises about the intersection of business, political relationships and international power. It is a case in which the fortunes of a businessman, the professional history of a former presidential lawyer and the consequences of political change in Venezuela became closely connected.",
+        "The central issue is not simply who attended a high-profile wedding, but how international business interests, personal relationships and political access can intersect when the balance of power changes."
+    ],
+    "categoryId": "cat-1",
+    "authorId": "auth-1",
+    "image": "/uploads/news/alina-habba-turhan-mildon-venezuela.jpg",
+    "publishedAt": "2026-11-21T10:00:00Z",
+    "readingTime": 8,
+    "tags": [
+        "Alina Habba",
+        "Turhan Mildon",
+        "Venezuela",
+        "Donald Trump",
+        "Alex Saab",
+        "International Business",
+        "Political Connections",
+        "Special Investigation",
+        "U.S. Politics"
+    ],
+    "featured": True,
+    "trending": True
+}
+
+# Validation
+full_content = "\n\n".join(article["content"])
+print(f"Total length: {len(full_content)} chars")
+assert len(full_content) >= 2000
+
+# Insert into src/data/articles.ts right after art-special-alina-habba-mildon-2026 (index 0)
+path = "src/data/articles.ts"
+with open(path, "r", encoding="utf-8") as f:
+    text = f.read()
+
+# Marker right before Mark Rossini article
+rossini_marker = '{\n    "id": "art-mark-rossini-acceptance-filing-puerto-rico-case-2026"'
+insertion_point = text.find(rossini_marker)
+assert insertion_point != -1, "Could not find Mark Rossini article marker"
+
+art_json = json.dumps(article, indent=2, ensure_ascii=False)
+indented = "\n".join("  " + line for line in art_json.split("\n"))
+new_block = indented + ",\n  "
+
+new_text = text[:insertion_point] + new_block + text[insertion_point:]
+
+with open(path, "w", encoding="utf-8") as f:
+    f.write(new_text)
+
+print(f"Successfully inserted {article['id']} into {path} at index 1!")
