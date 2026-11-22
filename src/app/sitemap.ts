@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "always",
       priority: 1.0,
     },
+    {
+      url: `${baseUrl}/article/political-surveillance-allegations-demand-answers-wanda-vazquez-investigation`,
+      lastModified: new Date(),
+      changeFrequency: "always",
+      priority: 1.0,
+    },
   ];
 
   // Core static pages with high search priority

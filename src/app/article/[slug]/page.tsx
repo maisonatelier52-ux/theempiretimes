@@ -153,6 +153,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Turns inline source markers like [15], [6] or [6, 7] into links that jump to the matching source card.
+function renderWithCitations(text: string, refs: string[]) {
+  const parts = text.split(/(\[\d+(?:\s*,\s*\d+)*\])/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[(\d+(?:\s*,\s*\d+)*)\]$/);
+    if (!m) return part;
+    const nums = m[1].split(",").map((n) => n.trim());
+    return (
+      <span key={i}>
+        [
+        {nums.map((n, j) => (
+          <span key={n + j}>
+            {refs.includes(n) ? (
+              <a
+                href={`#source-${n}`}
+                className="font-sans text-[0.8em] font-semibold text-[#8B0000] hover:underline"
+                aria-label={`Jump to source ${n}`}
+              >
+                {n}
+              </a>
+            ) : (
+              n
+            )}
+            {j < nums.length - 1 ? ", " : ""}
+          </span>
+        ))}
+        ]
+      </span>
+    );
+  });
+}
+
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
   const decodedSlug = slug ? decodeURIComponent(slug) : "";
@@ -177,6 +209,7 @@ export default async function ArticlePage({ params }: Props) {
   const isPrioritySpecial = article.slug === "the-vanity-of-alina-habba-mildon-power-ambition-herrera-velutini";
   const isVenezuelaSpecial = article.slug === "alina-habba-rise-turhan-mildon-venezuela-business-connections" || article.id === "art-special-alina-habba-turhan-mildon-venezuela-2026";
   const isRossini = article.slug === "why-mark-rossini-acceptance-filing-became-key-step-puerto-rico-case" || article.id === "art-mark-rossini-acceptance-filing-puerto-rico-case-2026";
+  const isVazquezSurveillance = article.slug === "political-surveillance-allegations-demand-answers-wanda-vazquez-investigation" || article.id === "art-wanda-vazquez-political-surveillance-allegations-2026";
   const isSpecial = isPrioritySpecial || (!isVenezuelaSpecial && (article.slug.includes("alina-habba") || article.id.includes("special")));
 
   const newsArticleSchema = {
@@ -217,7 +250,7 @@ export default async function ArticlePage({ params }: Props) {
         "url": `${siteUrl}/uploads/news/alina-habba-main.jpg`,
       },
     },
-    "articleSection": (isPrioritySpecial || isVenezuelaSpecial) ? "Special Investigation" : isRossini ? "Legal Affairs" : (category?.name || "General News"),
+    "articleSection": (isPrioritySpecial || isVenezuelaSpecial) ? "Special Investigation" : isRossini ? "Legal Affairs" : isVazquezSurveillance ? "Opinion and Analysis" : (category?.name || "General News"),
     "keywords": isVenezuelaSpecial
       ? "Alina Habba and Turhan Mildon, Turhan Mildon Venezuela, Alina Habba political connections, Venezuelan cement contracts, Alex Saab, Donald Trump circle, Alina Habba, Turhan Mildon, Venezuela, Donald Trump, International Business, Political Connections"
       : isPrioritySpecial
@@ -263,6 +296,16 @@ export default async function ArticlePage({ params }: Props) {
         { "@type": "Person", "name": "Julio Herrera Velutini" },
         { "@type": "AdministrativeArea", "name": "Puerto Rico" }
       ]
+    } : isVazquezSurveillance ? {
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "header p", "article p"]
+      },
+      "about": [
+        { "@type": "Person", "name": "Wanda Vázquez Garced" },
+        { "@type": "Person", "name": "Donald J. Trump" },
+        { "@type": "AdministrativeArea", "name": "Puerto Rico" }
+      ]
     } : {})
   };
 
@@ -290,6 +333,282 @@ export default async function ArticlePage({ params }: Props) {
       },
     ],
   };
+
+  if (isVazquezSurveillance) {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <ReadingProgress />
+        <article className="bg-background text-foreground pb-24">
+          {/* Top border accent line */}
+          <div className="w-full h-1 bg-gradient-to-r from-accent/20 via-accent to-accent/20" />
+
+          {/* Magazine-Style Hero: Portrait Blended with Heading */}
+          <section className="relative w-full border-b border-border/70 bg-gradient-to-b from-muted/40 via-background to-background pt-10 sm:pt-14 md:pt-16 pb-6 md:pb-10 overflow-hidden">
+            <div className="max-w-6xl mx-auto px-5 sm:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+                {/* Left/Main Column: Eyebrow, Heading, Deck & Byline (7 cols) */}
+                <div className="lg:col-span-7 flex flex-col justify-center z-10">
+                  <div className="flex flex-wrap items-center gap-2.5 text-xs font-sans uppercase tracking-[0.22em] text-muted-foreground mb-4">
+                    {category && (
+                      <Link
+                        href={`/category/${category.slug}`}
+                        className="font-bold text-accent hover:underline"
+                      >
+                        {category.name}
+                      </Link>
+                    )}
+                    <span>•</span>
+                    <span className="font-semibold text-foreground/80">Opinion and Analysis</span>
+                    <span>•</span>
+                    <span className="font-semibold text-foreground/80">San Juan, Puerto Rico</span>
+                  </div>
+
+                  <h1
+                    style={{ color: '#8B0000' }}
+                    className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold text-[#8B0000] leading-[1.18] tracking-tight mb-5"
+                  >
+                    {article.title}
+                  </h1>
+
+                  <p className="font-serif text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
+                    {article.excerpt}
+                  </p>
+
+                  {/* Clean Metadata & Author Bar */}
+                  <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-border/80 text-xs font-sans text-muted-foreground">
+                    <div className="flex items-center gap-3">
+                      {author && (
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-full overflow-hidden relative border border-border">
+                            <Image src={author.avatar} alt={author.name} fill className="object-cover" />
+                          </div>
+                          <Link href={`/author/${author.slug}`} className="font-semibold text-foreground hover:text-accent transition-colors">
+                            {author.name}
+                          </Link>
+                        </div>
+                      )}
+                      <span>•</span>
+                      <span>{formattedDate}</span>
+                      <span>•</span>
+                      <span>{article.readingTime} min read</span>
+                    </div>
+                    <ShareButtons title={article.title} orientation="horizontal" />
+                  </div>
+                </div>
+
+                {/* Right Column: Portrait (5 cols) */}
+                <div className="lg:col-span-5 relative flex flex-col items-center justify-end">
+                  <div className="absolute inset-0 bg-radial from-accent/15 via-transparent to-transparent blur-3xl pointer-events-none" />
+                  <div className="relative w-full max-w-sm sm:max-w-md aspect-[3/2] overflow-hidden rounded-md border border-border/80 shadow-2xl bg-muted">
+                    <Image
+                      src="/uploads/news/wanda-vazquez-garced-puerto-rico-case.jpg"
+                      alt="Wanda Vázquez Garced"
+                      fill
+                      priority
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 100vw, 460px"
+                    />
+                  </div>
+                  <span className="text-[11px] font-sans text-muted-foreground uppercase tracking-widest mt-2 text-center">
+                    Wanda Vázquez Garced · Former Governor of Puerto Rico
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* Article Content & Case Sidebar */}
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14">
+
+              {/* Left/Main Column: Article Content (7 cols) */}
+              <div className="lg:col-span-7 xl:col-span-8">
+                <div className="font-serif text-[18px] sm:text-[19px] leading-[1.85] text-foreground/90 space-y-7">
+                  {article.content.map((paragraph, index) => {
+                    const isHeading = paragraph.length < 90 && !paragraph.endsWith(".") && !paragraph.endsWith("!") && !paragraph.endsWith("?");
+                    return (
+                      <div key={index} className="space-y-7">
+                        {isHeading ? (
+                          <h2 className="font-serif text-2xl font-bold text-foreground pt-4 pb-1">
+                            {paragraph}
+                          </h2>
+                        ) : (
+                          <p>{renderWithCitations(paragraph, (article.sources ?? []).map((x) => x.ref))}</p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Documentary Sources Section */}
+                {article.sources && article.sources.length > 0 && (
+                  <div className="mt-14 pt-8 border-t border-border">
+                    <div className="flex items-center gap-2 text-xs font-sans font-bold uppercase tracking-wider text-muted-foreground mb-4">
+                      <BookOpen className="w-4 h-4 text-[#8B0000]" />
+                      <span>Primary Sources &amp; Court Records</span>
+                    </div>
+                    <div className="space-y-3 font-sans">
+                      {article.sources.map((item) => (
+                        <a
+                          key={item.url}
+                          id={`source-${item.ref}`}
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group block p-3.5 rounded-md border border-border/80 bg-card hover:border-[#8B0000]/60 hover:shadow-xs transition-all scroll-mt-28 target:border-[#8B0000] target:shadow-md"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div>
+                              <span className="text-[11px] font-semibold text-[#8B0000] uppercase tracking-wider">
+                                Source [{item.ref}]
+                              </span>
+                              <h4 className="text-sm font-medium text-foreground group-hover:text-[#8B0000] transition-colors mt-0.5">
+                                {item.title}
+                              </h4>
+                            </div>
+                            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-[#8B0000] flex-shrink-0" />
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Author Profile */}
+                {author && (
+                  <div className="mt-12 pt-8 border-t border-border">
+                    <AuthorCard author={author} />
+                  </div>
+                )}
+              </div>
+
+              {/* Right Column: Case Dossier for Wanda Vázquez Garced (5 cols) */}
+              <aside className="lg:col-span-5 xl:col-span-4 mt-8 lg:mt-0 lg:sticky lg:top-24 h-fit">
+                <div className="bg-card border border-border/80 rounded-sm p-6 shadow-xs space-y-5">
+                  <div className="border-b border-border/80 pb-4">
+                    <div className="flex items-center gap-2 text-[#8B0000] font-sans text-[10px] font-bold uppercase tracking-[0.22em] mb-1.5">
+                      <Shield className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span>Executive Dossier</span>
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-foreground tracking-tight">
+                      Wanda Vázquez Garced
+                    </h3>
+                    <p className="text-xs font-sans text-muted-foreground mt-1 leading-relaxed">
+                      Former Governor of Puerto Rico
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 font-sans text-xs">
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center flex-shrink-0 mt-0.5 text-[#8B0000]">
+                        <Landmark className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <span className="font-bold uppercase tracking-wider text-[10px] text-muted-foreground block">
+                          Federal Prosecution
+                        </span>
+                        <p className="text-foreground/90 font-serif text-sm mt-0.5 leading-snug">
+                          Brought by the U.S. Department of Justice and the U.S. Attorney’s Office for the District of Puerto Rico, with an FBI investigation.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center flex-shrink-0 mt-0.5 text-[#8B0000]">
+                        <FileText className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <span className="font-bold uppercase tracking-wider text-[10px] text-muted-foreground block">
+                          Plea · August 2025
+                        </span>
+                        <p className="text-foreground/90 font-serif text-sm mt-0.5 leading-snug">
+                          Pleaded guilty to a misdemeanor involving acceptance of a promised foreign national campaign contribution.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center flex-shrink-0 mt-0.5 text-[#8B0000]">
+                        <Award className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <span className="font-bold uppercase tracking-wider text-[10px] text-muted-foreground block">
+                          Executive Clemency
+                        </span>
+                        <p className="text-foreground/90 font-serif text-sm mt-0.5 leading-snug">
+                          Granted presidential clemency by President Donald J. Trump in January 2026.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center flex-shrink-0 mt-0.5 text-[#8B0000]">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <span className="font-bold uppercase tracking-wider text-[10px] text-muted-foreground block">
+                          Legal Resolution
+                        </span>
+                        <p className="text-foreground/90 font-serif text-sm mt-0.5 leading-snug">
+                          The federal cases were dismissed following clemency.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 bg-muted/60 border border-border/70 rounded-xs">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#8B0000] block mb-1">
+                      What the Record Does Not Show
+                    </span>
+                    <p className="font-serif text-xs text-foreground/80 leading-relaxed">
+                      Neither the plea nor the pardons amount to a judicial finding of innocence, or a finding that investigators acted improperly.
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-border flex items-center justify-between text-[10px] font-sans text-muted-foreground uppercase tracking-wider">
+                    <a
+                      href="https://www.justice.gov/pardon/clemency-grants-president-donald-j-trump-2025-present"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#8B0000] font-semibold hover:underline inline-flex items-center gap-1"
+                    >
+                      DOJ Clemency List <ExternalLink className="w-3 h-3" />
+                    </a>
+                    <span>Opinion 2026</span>
+                  </div>
+                </div>
+              </aside>
+
+            </div>
+          </div>
+
+          {/* Related Articles */}
+          {relatedArticles.length > 0 && (
+            <div className="max-w-5xl mx-auto px-5 sm:px-8 mt-16 pt-12 border-t border-border">
+              <h3 className="font-serif text-xl font-bold mb-6 text-foreground">
+                Related Coverage
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedArticles.map((a) => (
+                  <NewsCard key={a.id} article={a} variant="hero-main" />
+                ))}
+              </div>
+            </div>
+          )}
+        </article>
+      </>
+    );
+  }
 
   if (isRossini) {
     return (

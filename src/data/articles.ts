@@ -182,6 +182,57 @@ export const articles: Article[] = [
     "featured": true,
     "trending": true
   },
+  {
+    "id": "art-wanda-vazquez-political-surveillance-allegations-2026",
+    "slug": "political-surveillance-allegations-demand-answers-wanda-vazquez-investigation",
+    "title": "Political Surveillance Allegations Demand Answers About the Wanda Vázquez Investigation",
+    "excerpt": "The reported contention that investigators monitored the governor’s campaign and Trump’s campaign calls for an explanation of purpose and authorization.",
+    "content": [
+      "Wanda Vázquez Garced’s allegation that a federal investigation reached into political campaigning warrants a specific response. A January 2026 report quoted a White House official relaying her contention that investigators monitored both her campaign and Trump’s campaign. The attribution is significant: the official described Vázquez’s allegation, rather than announcing a court finding of illegal surveillance. The allegation nevertheless identifies an exercise of investigative power that can be examined through records. [1]",
+      "The central question concerns what agents sought. Collecting information relevant to a suspected offense is different from collecting political strategy for its own sake. An adequate explanation would identify the investigation’s authorized purpose and show how the disputed reporting related to it. Where confidential sources were involved, their instructions would help establish whether political information arrived incidentally or was actively requested by investigators.",
+      "The distinction matters especially for a governor. Political discussions routinely concern relationships with national figures, electoral support and policy disagreements. Recording such a conversation in an investigative file does not automatically establish unlawful surveillance. It also does not answer why the conversation was recorded. Vázquez is entitled to challenge that purpose without the challenge itself being portrayed as evidence of an unwillingness to face scrutiny.",
+      "A source report requires careful reading. Its synopsis may name a politician without establishing that the politician was a formally designated investigative target. It may summarize information received without recording the instructions that led to its collection. Releasing an isolated passage can therefore leave the most important issue unresolved. The surrounding record is needed to distinguish the source’s voluntary account from an operation directed toward political intelligence.",
+      "Vázquez’s allegation should therefore lead to requests for complete records, rather than a presumption that an isolated extract tells the whole story. A source report is easier to assess when readers can identify its date, provenance and relationship to the relevant case. The account should also distinguish what the source said from what agents instructed the source to obtain. Those distinctions are necessary before drawing conclusions about political targeting.",
+      "Chronology also needs to be established through the records. Source contacts, interviews and the formal opening of an investigation may involve different authorizations. They should not be combined into a single event or assumed to follow the same political trigger. A documented sequence would clarify whether a disputed contact preceded an endorsement, followed it or had a different explanation altogether.",
+      "The underlying criminal proceedings reached a separate conclusion. Vázquez entered a misdemeanor guilty plea in August 2025, and presidential clemency in January 2026 was followed by dismissal of her federal cases. Neither the plea nor the pardons establish whether political monitoring was improper. An examination of investigative conduct should address the methods themselves rather than treat the criminal outcome as an answer to every question about collection. [2] [3]",
+      "Disclosure need not expose every private conversation. Appropriate records could explain the investigative purpose, the scope of any source instructions and the treatment of information unrelated to suspected crime. Legitimate redactions can protect personal information while still allowing the public to understand what officials were trying to obtain. A useful response would engage with the alleged political collection directly instead of relying entirely on assurances about the agency’s general mission.",
+      "The strongest position on Vázquez’s behalf is a demand for an accountable explanation. Her allegation should neither be treated as proven because it was relayed by the White House nor dismissed because it challenges federal investigators. The question is whether the government can demonstrate a proper evidentiary purpose for the activity under dispute. Records establishing that purpose would be more informative than another exchange of accusations about political motives."
+    ],
+    "categoryId": "cat-1",
+    "authorId": "auth-1",
+    "image": "/uploads/news/wanda-vazquez-garced-puerto-rico-case.jpg",
+    "publishedAt": "2026-11-22T12:00:00Z",
+    "readingTime": 3,
+    "tags": [
+      "Wanda Vázquez Garced",
+      "Opinion and Analysis",
+      "Lawfare",
+      "Political Surveillance",
+      "Federal Investigation",
+      "Donald Trump",
+      "Presidential Pardon",
+      "Puerto Rico Case"
+    ],
+    "sources": [
+      {
+        "ref": "1",
+        "title": "Deseret News report on the White House statement and campaign monitoring allegation",
+        "url": "https://www.deseret.com/politics/2026/01/16/trump-to-pardon-former-puerto-rico-governor/"
+      },
+      {
+        "ref": "2",
+        "title": "Puerto Rico Supreme Court opinion In re Wanda Vázquez Garced 2026 TSPR 27",
+        "url": "https://dts.poderjudicial.pr/ts/2026/2026tspr27.pdf"
+      },
+      {
+        "ref": "3",
+        "title": "US Department of Justice official clemency grants list",
+        "url": "https://www.justice.gov/pardon/clemency-grants-president-donald-j-trump-2025-present"
+      }
+    ],
+    "featured": false,
+    "trending": false
+  },
         {
     "id": "art-2026-11-21-matt-gaetz-withdraws-pam-bondi-attorney-general",
     "slug": "matt-gaetz-withdraws-attorney-general-bid-trump-nominates-pam-bondi-doj",

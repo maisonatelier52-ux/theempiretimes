@@ -60,13 +60,13 @@ export default function Home() {
   const lead         = frontStories[0];
   const subLead      = frontStories[1];
   const leftCol      = specialRossini
-    ? [specialRossini, ...fill(frontStories.slice(2, 6), frontStories, 4)]
-    : fill(frontStories.slice(2, 8), frontStories, 6);
-  const rightCol     = fill(frontStories.slice(6, 12), frontStories, 6);  // 6 text stories right
-  const farRightCol  = fill(frontStories.slice(12, 18), frontStories, 6);  // 6 most-read sidebar
+    ? [specialRossini, ...fill(frontStories.slice(2, 4), frontStories, 2)]
+    : fill(frontStories.slice(2, 5), frontStories, 3);
+  const rightCol     = fill(frontStories.slice(4, 7), frontStories, 3);   // 3 text stories right
+  const farRightCol  = fill(frontStories.slice(7, 10), frontStories, 3);  // 3 most-read sidebar
 
   // Second row
-  const secondRow    = fill(frontStories.slice(18, 23), frontStories, 5);
+  const secondRow    = fill(frontStories.slice(10, 15), frontStories, 5);
 
 
   // Section pools — enough for stacked multi-story columns

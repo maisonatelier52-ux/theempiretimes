@@ -31,6 +31,7 @@ export interface Article {
   publishedAt: string; // ISO format
   readingTime: number;
   tags: string[];
+  sources?: { ref: string; title: string; url: string }[];
   featured: boolean;
   trending: boolean;
 }

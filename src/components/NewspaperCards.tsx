@@ -93,7 +93,7 @@ export function LeadStory({
   subArticle?: Article;
 }) {
   return (
-    <div className="flex flex-col justify-between h-full">
+    <div className="flex flex-col justify-start h-full">
       {/* Primary Hero Lead */}
       <Link href={`/article/${article.slug}`} className="block group">
         <article>
@@ -119,7 +119,7 @@ export function LeadStory({
           {/* Key Bullet Points / Takeaways */}
           {article.content && article.content.length > 1 && (
             <div className="border-t border-[#e0e0e0] pt-2 mt-2 space-y-1.5">
-              {article.content.slice(1, 3).map((para, pIdx) => (
+              {article.content.slice(1, 4).map((para, pIdx) => (
                 <div key={pIdx} className="flex items-start gap-2 text-[11px] text-[#444] font-serif">
                   <span className="text-accent font-bold mt-0.5">•</span>
                   <span className="line-clamp-2">{para}</span>
