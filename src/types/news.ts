@@ -28,12 +28,15 @@ export interface Article {
   categoryId: string;
   authorId: string;
   image: string;
+  imageCaption?: string;
   publishedAt: string; // ISO format
   readingTime: number;
   tags: string[];
   sources?: { ref: string; title: string; url: string }[];
   featured: boolean;
   trending: boolean;
+  breaking?: boolean;
+  relatedArticles?: string[];
 }
 
 export interface PopulatedArticle extends Omit<Article, 'categoryId' | 'authorId'> {
